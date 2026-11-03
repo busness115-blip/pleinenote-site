@@ -44,7 +44,7 @@ section:last-of-type{border-bottom:0}
 .bouton.creux:hover{border-color:var(--tampon);color:var(--tampon)}
 
 /* Règle graduée des 72 heures */
-.regle{position:relative;margin-top:40px;padding-top:64px}
+.regle{position:relative;margin-top:40px;padding-top:64px;overflow-x:clip}
 .echelle{position:relative;height:30px;border-bottom:2px solid var(--encre);
   background:
     repeating-linear-gradient(90deg,var(--encre) 0 2px,transparent 2px calc(100%/6)) bottom/100% 30px no-repeat,
@@ -166,6 +166,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .demande .bouton{justify-self:start;cursor:pointer}
 .demande .mention{font-size:.9rem;color:color-mix(in srgb,var(--papier) 75%,var(--encre))}
 .demande .mention a{display:inline-block;padding-block:10px;margin-block:-10px}
+.lien-bouton{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
 .demande-etat{margin-top:12px;padding:12px 14px;border-radius:8px;background:color-mix(in srgb,var(--papier) 12%,transparent);font-size:.95rem}
 .pot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .contact .coord{margin-top:8px}
@@ -332,16 +333,11 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
   <div class="contact pile">
     <h2>Un marché en vue&nbsp;?</h2>
     <p class="doux">Envoyez le lien de l'avis ou le dossier de consultation. Vous recevez la pré-analyse sous 24&nbsp;heures ouvrées, offerte, et nous vous disons si le marché vaut la peine.</p>
-    <form class="demande" id="demande" action="https://formsubmit.co/contact@pleinenote.fr" method="POST">
-      <input type="hidden" name="_subject" value="Demande de pré-analyse (site Pleine Note)">
-      <input type="hidden" name="_next" value="https://pleinenote.fr/merci.html">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_autoresponse" value="Bonjour, nous avons bien reçu votre demande de pré-analyse. Nous lisons le dossier de consultation et vous envoyons la pré-analyse sous 24 heures ouvrées : critères, pièces éliminatoires, pièges, et notre avis franc sur vos chances. Un complément à nous transmettre ? Écrivez-nous à contact@pleinenote.fr. Bien cordialement, AM DATA · Pleine Note, 06 29 60 65 21">
+    <form class="demande" id="demande" action="https://docs.google.com/forms/d/e/1FAIpQLScpXIE2QoC99rWN1qbaf5G6HypukvKM5F-k07Mul8ap0YM3AQ/formResponse" method="POST">
       <input type="text" name="_honey" class="pot" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label>Lien de l'avis ou référence du marché<input name="marche" required autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="next" placeholder="https://www.boamp.fr/… ou n° de l'avis"></label>
-      <label>Votre email professionnel<input name="email" type="email" required autocomplete="email" placeholder="nom@entreprise.fr"></label>
-      <label><span>Votre entreprise <i>(facultatif)</i></span><input name="entreprise" autocomplete="organization"></label>
+      <label>Lien de l'avis ou référence du marché<input name="entry.1744021403" required autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="next" placeholder="https://www.boamp.fr/… ou n° de l'avis"></label>
+      <label>Votre email professionnel<input name="entry.342255854" type="email" required autocomplete="email" placeholder="nom@entreprise.fr"></label>
+      <label><span>Votre entreprise <i>(facultatif)</i></span><input name="entry.425301078" autocomplete="organization"></label>
       <button class="bouton plein" type="submit">Recevoir ma pré-analyse offerte</button>
       <p class="mention">Vos informations servent uniquement à vous répondre (voir les mentions légales). Vous préférez l'email&nbsp;?
       <a href="mailto:contact@pleinenote.fr?subject=March%C3%A9%20%C3%A0%20analyser&body=Bonjour%2C%0A%0ALien%20de%20l%27avis%20ou%20du%20dossier%20de%20consultation%20%3A%20%0ADate%20limite%20de%20remise%20%3A%20%0AEntreprise%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci%20de%20m%27envoyer%20la%20pr%C3%A9-analyse.%0A">Écrire directement</a>.</p>
@@ -350,24 +346,26 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
     <script>
 (function(){
   var f=document.getElementById('demande'); if(!f||!window.fetch) return;
-  var etat=document.getElementById('demande-etat'), b=f.querySelector('button[type=submit]');
-  function repli(d){
-    var corps='Bonjour,\n\nLien de l\'avis ou référence du marché : '+d.get('marche')+'\nEntreprise : '+(d.get('entreprise')||'')+'\nEmail : '+d.get('email')+'\n\nMerci de m\'envoyer la pré-analyse.\n';
+  var etat=document.getElementById('demande-etat'), b=f.querySelector('button[type=submit]'), L=b.textContent;
+  function echec(d){
+    var corps='Bonjour,\n\nLien de l\'avis ou référence du marché : '+d.get('__M')+'\nEntreprise : '+(d.get('__E')||'')+'\nEmail : '+d.get('__C')+'\n\nMerci de m\'envoyer la pré-analyse.\n';
     etat.hidden=false;
-    etat.innerHTML='Votre messagerie va s\'ouvrir avec la demande déjà rédigée : il ne reste qu\'à l\'envoyer. Rien ne s\'ouvre&nbsp;? Écrivez-nous à <a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a> avec le lien de l\'avis.';
-    location.href='mailto:contact@pleinenote.fr?subject='+encodeURIComponent('Demande de pré-analyse')+'&body='+encodeURIComponent(corps);
+    etat.innerHTML='L\'envoi n\'a pas abouti (connexion ou blocage réseau). Votre demande n\'est pas perdue : écrivez-nous à <a href="mailto:contact@pleinenote.fr?subject='+encodeURIComponent('Demande de pré-analyse')+'&body='+encodeURIComponent(corps)+'">contact@pleinenote.fr</a> avec le lien de l\'avis, ou <button type="button" id="copier-adresse" class="lien-bouton">copiez l\'adresse</button>.';
+    var c=document.getElementById('copier-adresse');
+    if(c) c.onclick=function(){ try{ navigator.clipboard.writeText('contact@pleinenote.fr').then(function(){ c.textContent='adresse copiée'; }); }catch(x){ c.textContent='contact@pleinenote.fr'; } };
   }
   f.addEventListener('submit',function(e){
     if(!f.checkValidity()) return;
     e.preventDefault();
-    var d=new FormData(f); if(d.get('_honey')) return;
-    b.disabled=true; b.textContent='Envoi en cours…';
-    var c=window.AbortController?new AbortController():null, t=setTimeout(function(){ if(c) c.abort(); },9000);
-    fetch('https://formsubmit.co/ajax/contact@pleinenote.fr',{method:'POST',body:d,headers:{'Accept':'application/json'},signal:c?c.signal:undefined})
-      .then(function(r){ return r.json(); })
-      .then(function(j){ clearTimeout(t); if(j && (j.success===true||j.success==='true')) location.href='merci.html'; else repli(d); })
-      .catch(function(){ clearTimeout(t); repli(d); })
-      .finally(function(){ b.disabled=false; b.textContent='Recevoir ma pré-analyse offerte'; });
+    if(f.querySelector('[name=_honey]').value) { location.href='merci.html'; return; }
+    var d=new FormData(), m=f.elements['entry.1744021403'].value.trim(), c=f.elements['entry.342255854'].value.trim(), en=f.elements['entry.425301078'].value.trim();
+    d.append('entry.1744021403',m); d.append('entry.342255854',c); d.append('entry.425301078',en);
+    var info=new FormData(); info.append('__M',m); info.append('__C',c); info.append('__E',en);
+    b.disabled=true; b.textContent='Envoi en cours…'; etat.hidden=true;
+    var ac=window.AbortController?new AbortController():null, t=setTimeout(function(){ if(ac) ac.abort(); },10000);
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLScpXIE2QoC99rWN1qbaf5G6HypukvKM5F-k07Mul8ap0YM3AQ/formResponse',{method:'POST',mode:'no-cors',body:d,signal:ac?ac.signal:undefined})
+      .then(function(){ clearTimeout(t); location.href='merci.html'; })
+      .catch(function(){ clearTimeout(t); b.disabled=false; b.textContent=L; echec(info); });
   });
 })();
 </script>

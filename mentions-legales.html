@@ -44,7 +44,7 @@ section:last-of-type{border-bottom:0}
 .bouton.creux:hover{border-color:var(--tampon);color:var(--tampon)}
 
 /* Règle graduée des 72 heures */
-.regle{position:relative;margin-top:40px;padding-top:64px}
+.regle{position:relative;margin-top:40px;padding-top:64px;overflow-x:clip}
 .echelle{position:relative;height:30px;border-bottom:2px solid var(--encre);
   background:
     repeating-linear-gradient(90deg,var(--encre) 0 2px,transparent 2px calc(100%/6)) bottom/100% 30px no-repeat,
@@ -166,6 +166,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .demande .bouton{justify-self:start;cursor:pointer}
 .demande .mention{font-size:.9rem;color:color-mix(in srgb,var(--papier) 75%,var(--encre))}
 .demande .mention a{display:inline-block;padding-block:10px;margin-block:-10px}
+.lien-bouton{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
 .demande-etat{margin-top:12px;padding:12px 14px;border-radius:8px;background:color-mix(in srgb,var(--papier) 12%,transparent);font-size:.95rem}
 .pot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .contact .coord{margin-top:8px}
@@ -186,7 +187,7 @@ Email : contact@pleinenote.fr · Téléphone : 06 29 60 65 21<br>Directeur de la
 <h2>Données personnelles</h2>
 <p>Les informations que vous nous transmettez (contact, dossier de consultation, documents d'entreprise) servent uniquement à répondre à votre demande et à exécuter la prestation. Elles ne sont ni vendues ni cédées. Vous pouvez demander leur accès, leur rectification ou leur suppression à contact@pleinenote.fr.</p>
 <p>Nous contactons des entreprises au sujet de marchés publics correspondant à leur activité, à partir de données publiques (BOAMP, données essentielles de la commande publique, annuaire des entreprises). Données utilisées : nom de l'entreprise, nom du dirigeant tel que publié, adresse email professionnelle publiée sur le site de l'entreprise. Base légale : intérêt légitime (prospection d'entreprises au sujet de leur activité). Ces données sont conservées au plus 3 ans après le dernier contact. Chaque message permet de s'opposer à tout nouveau contact en répondant « stop » ; l'opposition est enregistrée et définitive. Vous pouvez aussi saisir la CNIL (cnil.fr).</p>
-<p>Le formulaire de demande est acheminé vers notre messagerie par le service FormSubmit (formsubmit.co), qui ne sert qu'à transmettre votre message.</p>
+<p>Le formulaire de demande est acheminé vers notre messagerie par un formulaire Google Forms (Google Ireland Limited), qui ne sert qu'à nous transmettre votre message.</p>
 <p>Les demandes faites par un formulaire LinkedIn (nom, email, entreprise, référence du marché) nous sont transmises par LinkedIn et servent uniquement à vous envoyer la pré-analyse demandée et à répondre à vos questions. Elles sont conservées au plus 3 ans après le dernier échange, et supprimées sur simple demande.</p>
 <h2>Cookies</h2>
 <p>Ce site ne dépose aucun cookie de suivi publicitaire.</p>
