@@ -1,0 +1,354 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta property="og:title" content="Mémoire technique marché public en 72 h | Pleine Note"><meta property="og:description" content="Mémoire technique pour marché public, prêt à déposer en 72 h et calé sur la grille de notation. Propreté, espaces verts, informatique. Pré-analyse offerte."><link rel="canonical" href="https://pleinenote.fr/"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#17224A"><meta property="og:type" content="website"><meta property="og:url" content="https://pleinenote.fr/"><meta property="og:image" content="https://pleinenote.fr/image-partage.png"><meta property="og:locale" content="fr_FR"><meta name="twitter:card" content="summary_large_image"><title>Mémoire technique marché public en 72 h | Pleine Note</title><meta name="description" content="Mémoire technique pour marché public, prêt à déposer en 72 h et calé sur la grille de notation. Propreté, espaces verts, informatique. Pré-analyse offerte."><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"><style>
+/* Concept : une page de dossier de consultation bien tenue - règle graduée des 72 heures, tampon « prêt à déposer », texte en colonne étroite. */
+:root{
+  --papier:#F4F5F2; --surface:#FFFFFF; --encre:#17224A; --encre-douce:#4A5370; --filet:#D5D9E2;
+  --tampon:#5B3CC4; --surligneur:#FFE36B; --sur-surligneur:#17224A;
+  --f-titre:"Archivo","Arial Narrow",Arial,sans-serif; --f-texte:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --colonne:42rem; --large:68rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --papier:#10142A; --surface:#171C36; --encre:#E7E9F2; --encre-douce:#A4ABC3; --filet:#2C3354;
+  --tampon:#A78DFF; --surligneur:#F1DA5A; --sur-surligneur:#17224A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --papier:#10142A; --surface:#171C36; --encre:#E7E9F2; --encre-douce:#A4ABC3; --filet:#2C3354;
+  --tampon:#A78DFF; --surligneur:#F1DA5A; --sur-surligneur:#17224A; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papier);color:var(--encre);font:1.125rem/1.65 var(--f-texte);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration-color:var(--tampon);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--tampon);outline-offset:3px;border-radius:2px}
+.cadre{max-width:var(--large);margin:0 auto}
+h1,h2,h3{font-family:var(--f-titre);font-stretch:85%;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:750;max-width:14ch}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;max-width:22ch}
+h3{font-size:1.2rem;font-weight:700;font-stretch:90%}
+p{margin:0;max-width:var(--colonne)}
+.doux{color:var(--encre-douce)}
+.entete{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;border-bottom:1px solid var(--filet)}
+.marque{font-family:var(--f-titre);font-weight:800;font-stretch:80%;font-size:1.35rem;text-decoration:none;letter-spacing:-.01em}
+.marque span{color:var(--tampon)}
+.surtitre{font-family:var(--f-titre);font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tampon);margin-bottom:14px}
+.entete .tel{font-family:var(--f-titre);font-size:.95rem;font-stretch:90%;white-space:nowrap}
+section{padding-block:clamp(48px,8vw,96px);border-bottom:1px solid var(--filet)}
+section:last-of-type{border-bottom:0}
+.pile{display:grid;gap:20px}
+.hero{padding-block:clamp(40px,7vw,80px) 28px;border-bottom:0}
+.hero .pile{gap:24px}
+.lead{font-size:clamp(1.15rem,2.2vw,1.35rem);line-height:1.55}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.bouton{font-family:var(--f-titre);font-stretch:90%;font-weight:650;font-size:1.05rem;display:inline-flex;align-items:center;
+  min-height:48px;padding:10px 20px;border-radius:4px;text-decoration:none;border:2px solid var(--encre)}
+.bouton.plein{background:var(--encre);color:var(--papier)}
+.bouton.plein:hover{background:var(--tampon);border-color:var(--tampon)}
+.bouton.creux:hover{border-color:var(--tampon);color:var(--tampon)}
+
+/* Règle graduée des 72 heures */
+.regle{position:relative;margin-top:40px;padding-top:64px}
+.echelle{position:relative;height:30px;border-bottom:2px solid var(--encre);
+  background:
+    repeating-linear-gradient(90deg,var(--encre) 0 2px,transparent 2px calc(100%/6)) bottom/100% 30px no-repeat,
+    repeating-linear-gradient(90deg,var(--encre-douce) 0 1px,transparent 1px calc(100%/72)) bottom/100% 10px no-repeat}
+.remplissage{position:absolute;left:0;bottom:-2px;height:6px;width:100%;background:var(--tampon);transform-origin:left;transform:scaleX(1)}
+.jalons{list-style:none;margin:0;padding:0;position:relative;height:150px}
+.jalons li{position:absolute;top:0;transform:translateX(-50%);width:9.5rem;padding-top:14px;text-align:center}
+.jalons li::before{content:"";position:absolute;top:-6px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--surface);border:2px solid var(--encre)}
+.jalons li:first-child{transform:none;text-align:left}.jalons li:first-child::before{left:0;margin-left:-5px}
+.jalons li:last-child{transform:translateX(-100%);text-align:right}.jalons li:last-child::before{left:auto;right:-6px;margin:0}
+.h{display:block;font-family:var(--f-titre);font-weight:800;font-stretch:110%;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.jalons small{display:block;font-size:.88rem;line-height:1.35;color:var(--encre-douce)}
+.tampon{position:absolute;right:0;top:0;transform:rotate(-7deg);color:var(--tampon);border:3px double var(--tampon);border-radius:6px;
+  padding:6px 14px 4px;font-family:var(--f-titre);font-weight:800;font-stretch:115%;font-size:1.05rem;letter-spacing:.08em;line-height:1.15;text-align:center;
+  background:color-mix(in srgb,var(--papier) 70%,transparent)}
+.tampon small{display:block;font-size:.7rem;letter-spacing:.14em;font-weight:700}
+@media (prefers-reduced-motion:no-preference){
+  .remplissage{animation:remplir 1.1s cubic-bezier(.6,.1,.3,1) .2s both}
+  .tampon{animation:frapper .35s cubic-bezier(.2,1.6,.4,1) 1.3s both}
+  @keyframes remplir{from{transform:scaleX(0)}}
+  @keyframes frapper{from{transform:rotate(-14deg) scale(1.9);opacity:0}}
+}
+@media (max-width:760px){
+  .regle{padding-top:0;margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:0 18px}
+  .echelle{grid-row:1;width:2px;height:auto;background:var(--encre);border:0;position:relative}
+  .remplissage{width:6px;height:100%;left:-2px;bottom:auto;top:0;transform-origin:top}
+  @media (prefers-reduced-motion:no-preference){@keyframes remplir{from{transform:scaleY(0)}}}
+  .jalons{height:auto;display:grid;gap:22px;grid-row:1}
+  .jalons li,.jalons li:first-child,.jalons li:last-child{position:relative;left:0!important;transform:none;text-align:left;width:auto;padding-top:0}
+  .jalons li::before,.jalons li:first-child::before,.jalons li:last-child::before{top:8px;left:-26px;right:auto;margin:0}
+  .tampon{position:relative;grid-column:2;justify-self:start;margin-top:22px}
+}
+
+/* Extrait de règlement de consultation */
+.deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start}
+@media (max-width:860px){.deux{grid-template-columns:minmax(0,1fr)}}
+.extrait{background:var(--surface);border:1px solid var(--filet);border-radius:3px;padding:22px 24px;font-size:1rem;min-width:0}
+.extrait .ref{font-family:var(--f-titre);font-stretch:90%;font-size:.9rem;color:var(--encre-douce);margin-bottom:10px}
+.extrait table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.extrait td{padding:7px 0;border-bottom:1px solid var(--filet);vertical-align:top}
+.extrait td:last-child{text-align:right;padding-left:12px;white-space:nowrap}
+.extrait .sous td:first-child{padding-left:18px;color:var(--encre-douce)}
+.extrait .total td{font-weight:600;border-bottom:2px solid var(--encre)}
+.barre{display:flex;height:12px;margin-top:16px;border-radius:2px;overflow:hidden}
+.barre i{display:block;background:var(--tampon)}.barre b{display:block;background:var(--filet);flex:1}
+
+/* Livrables */
+.livrables{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--filet)}
+.livrables li{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:8px 32px;padding-block:18px;border-bottom:1px solid var(--filet)}
+@media (max-width:640px){.livrables li{grid-template-columns:minmax(0,1fr)}}
+.livrables h3{font-size:1.1rem}
+.exemples{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+
+/* Rien d'inventé */
+mark{background:var(--surligneur);color:var(--sur-surligneur);padding:1px 4px;border-radius:2px;font-family:var(--f-titre);font-stretch:90%;font-size:.95em}
+.citation{border-left:3px solid var(--tampon);padding:4px 0 4px 20px;font-style:italic}
+
+/* Tarifs */
+.tarifs{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;max-width:var(--colonne)}
+.tarifs td{padding:16px 0;border-bottom:1px solid var(--filet);vertical-align:top}
+.tarifs td:last-child{text-align:right;font-family:var(--f-titre);font-weight:750;font-stretch:95%;font-size:1.3rem;white-space:nowrap;padding-left:16px}
+.tarifs small{display:block;color:var(--encre-douce);font-size:.95rem}
+.table-wrap{overflow-x:auto}
+
+/* Métiers */
+.metiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+@media (max-width:860px){.metiers{grid-template-columns:minmax(0,1fr)}}
+.metiers > div{border-top:3px solid var(--encre);padding-top:16px;min-width:0}
+.metiers ul{margin:10px 0 0;padding-left:1.1em;font-size:1rem;color:var(--encre-douce)}
+.metiers li{margin-bottom:6px}
+
+/* Questions */
+details{border-bottom:1px solid var(--filet);max-width:var(--colonne)}
+summary{cursor:pointer;padding-block:16px;font-family:var(--f-titre);font-stretch:90%;font-weight:650;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;color:var(--tampon)}
+details[open] summary::after{content:"−"}
+details p{padding-bottom:18px}
+
+/* Contact */
+.contact{background:var(--encre);color:var(--papier);border-radius:4px;padding:clamp(28px,5vw,56px)}
+.contact .doux{color:color-mix(in srgb,var(--papier) 75%,var(--encre))}
+.contact .bouton.plein{background:var(--papier);color:var(--encre);border-color:var(--papier)}
+.contact .bouton.plein:hover{background:var(--tampon);color:#fff;border-color:var(--tampon)}
+.coord{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--f-titre);font-stretch:90%;font-size:1.1rem}
+.coord span{user-select:all}
+footer{padding-block:28px 40px;font-size:.92rem;color:var(--encre-douce);display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
+
+/* Conversion */
+.bouton.petit{min-height:40px;padding:6px 14px;font-size:.95rem}
+.rassure{font-size:.98rem;color:var(--encre-douce)}
+.rassure a{display:inline-block;padding-block:10px;margin-block:-10px}
+.evitement{position:absolute;left:-999px;top:8px;background:var(--encre);color:var(--papier);padding:10px 16px;border-radius:4px;z-index:10}
+.evitement:focus{left:16px}
+.garanties{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:1rem}
+.garanties li{padding-left:22px;position:relative;max-width:20rem}
+.garanties li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:10px;border:2px solid var(--tampon);border-radius:50%}
+.exclusif h2{max-width:18ch}
+.etapes-bloc{background:var(--surface);border:1px solid var(--filet);border-radius:3px;padding:22px 24px}
+.etapes{margin:0;padding-left:1.4em;display:grid;gap:12px;font-size:1rem}
+.etapes li::marker{font-family:var(--f-titre);font-weight:800;color:var(--tampon)}
+.repere{border-left:3px solid var(--tampon);padding-left:16px}
+.tarifs tr.courant td{font-weight:600}
+.collant{display:none}
+@media (max-width:760px){
+  .entete .bouton.petit{font-size:.88rem;padding:6px 10px}
+  .collant{display:block;position:sticky;bottom:0;z-index:5;margin:0 -16px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+    background:color-mix(in srgb,var(--papier) 92%,transparent);border-top:1px solid var(--filet);backdrop-filter:blur(6px)}
+  .collant .bouton{width:100%;justify-content:center}
+}
+
+.demande{display:grid;gap:14px;max-width:34rem;margin-top:8px}
+.demande label{display:grid;gap:6px;font-family:var(--f-titre);font-stretch:92%;font-weight:600;font-size:1rem}
+.demande label i{font-style:normal;font-weight:400;opacity:.8}
+.demande input{font:1rem/1.4 var(--f-texte);padding:12px 14px;min-height:48px;border-radius:4px;border:2px solid transparent;background:var(--papier);color:var(--encre)}
+.demande input:focus-visible{outline:3px solid var(--tampon);outline-offset:2px}
+.demande input:user-invalid{border-color:#E5484D}
+.demande .bouton{justify-self:start;cursor:pointer}
+.demande .mention{font-size:.9rem;color:color-mix(in srgb,var(--papier) 75%,var(--encre))}
+.demande .mention a{display:inline-block;padding-block:10px;margin-block:-10px}
+.pot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.contact .coord{margin-top:8px}
+
+/* Pages de texte */
+.texte{max-width:var(--colonne);padding-block:48px}
+.texte h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:24px}
+.texte h2{font-size:1.25rem;margin:28px 0 8px;max-width:none}
+.texte p{margin-bottom:10px}
+</style></head><body>
+<a class="evitement" href="#contenu">Aller au contenu</a><header class="entete cadre"><a class="marque" href="index.html">Pleine <span>Note</span></a><a class="bouton plein petit" href="index.html#demande">Pré-analyse offerte</a></header>
+<main id="contenu">
+<section class="hero cadre">
+  <div class="pile">
+    <p class="surtitre">Pour les PME qui répondent aux marchés publics</p>
+    <h1>Votre mémoire technique, prêt à déposer en 72&nbsp;heures.</h1>
+    <p class="lead">Propreté, espaces verts, informatique&nbsp;: envoyez-nous l'avis du marché, nous rendons un mémoire construit
+    sur la grille de notation de l'acheteur, avec vos vrais moyens et vos vraies références, 72&nbsp;heures après réception de vos réponses. Tout se fait par écrit, sans rendez-vous.</p>
+    <div class="actions">
+      <a class="bouton plein" href="#demande">Recevoir ma pré-analyse offerte</a>
+      <a class="bouton creux" href="exemples/Memoire-technique_EXEMPLE_Proprete.pdf">Voir un mémoire exemple</a>
+    </div>
+    <p class="rassure">Pré-analyse offerte, sans engagement, sous 24&nbsp;heures ouvrées. Le mémoire ensuite&nbsp;: prix fixe, à partir de 890 €&nbsp;HT. Trois champs à remplir, ou un simple email à
+    <a href="mailto:contact@pleinenote.fr?subject=March%C3%A9%20%C3%A0%20analyser&body=Bonjour%2C%0A%0ALien%20de%20l%27avis%20ou%20du%20dossier%20de%20consultation%20%3A%20%0ADate%20limite%20de%20remise%20%3A%20%0AEntreprise%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci%20de%20m%27envoyer%20la%20pr%C3%A9-analyse.%0A">contact@pleinenote.fr</a> avec le lien de l'avis.</p>
+    <ul class="garanties">
+      <li><b>Un seul mémoire par lot.</b> Le premier paiement le réserve, les autres candidats sont refusés.</li>
+      <li><b>Conformité garantie.</b> Un sous-critère oublié, signalé à temps, est complété sans frais sous 24&nbsp;h.</li>
+      <li><b>Le solde à la livraison,</b> après avoir vu le travail. Rien d'inventé.</li>
+    </ul>
+  </div>
+  <div class="regle" aria-label="Déroulé des 72 heures">
+    <div class="echelle" aria-hidden="true"><div class="remplissage"></div></div>
+    <ol class="jalons">
+      <li style="left:0"><span class="h">H0</span><small>Vos réponses au questionnaire pré-rempli reçues</small></li>
+      <li style="left:33.33%"><span class="h">H+24</span><small>Version 1 complète</small></li>
+      <li style="left:66.67%"><span class="h">H+48</span><small>Vos corrections intégrées</small></li>
+      <li style="left:100%"><span class="h">H+72</span><small>Version finale, matrice de conformité, checklist de dépôt</small></li>
+    </ol>
+    <div class="tampon" aria-hidden="true">PRÊT À DÉPOSER<small>H+72</small></div>
+  </div>
+</section>
+
+<section class="cadre">
+  <div class="deux">
+    <div class="pile">
+      <h2>Le prix ne suffit pas. La note technique décide souvent.</h2>
+      <p>Dans les marchés de services, le mémoire technique pèse en moyenne 48&nbsp;% de la note&nbsp;: c'est ce que nous avons mesuré sur 161 grilles de notation publiées au BOAMP entre août et octobre 2026.
+      C'est la seule partie de l'offre où une PME peut battre un concurrent moins cher.</p>
+      <p>L'acheteur note chaque sous-critère avec une grille. Il cherche des preuves précises, propres à son site&nbsp;:
+      effectifs, fréquences, contrôles, délais d'intervention. Un texte générique y perd des points que le prix ne rattrape pas.</p>
+      <p class="doux">Nous écrivons un chapitre par sous-critère, dans l'ordre du règlement, avec les mots de l'acheteur.</p>
+    </div>
+    <figure class="extrait" style="margin:0">
+      <div class="ref">Extrait type d'un règlement de consultation, article «&nbsp;critères de jugement des offres&nbsp;»</div>
+      <table>
+        <tr class="total"><td>Valeur technique, appréciée au vu du mémoire</td><td>60&nbsp;%</td></tr>
+        <tr class="sous"><td>Moyens humains affectés et encadrement</td><td>20 pts</td></tr>
+        <tr class="sous"><td>Organisation et méthodologie</td><td>20 pts</td></tr>
+        <tr class="sous"><td>Contrôle qualité et suivi</td><td>10 pts</td></tr>
+        <tr class="sous"><td>Démarche environnementale</td><td>10 pts</td></tr>
+        <tr class="total"><td>Prix des prestations</td><td>40&nbsp;%</td></tr>
+      </table>
+      <div class="barre" aria-hidden="true"><i style="width:60%"></i><b></b></div>
+    </figure>
+  </div>
+</section>
+
+<section class="cadre exclusif">
+  <div class="deux">
+    <div class="pile">
+      <h2>Un seul mémoire par lot. Le premier qui paie le réserve.</h2>
+      <p>Sur un même lot, plusieurs de vos concurrents peuvent recevoir notre pré-analyse. Nous ne rédigeons pourtant qu'un mémoire&nbsp;:
+      celui de l'entreprise dont l'acompte, ou le règlement complet, nous parvient en premier. Dès ce paiement reçu, la place est fermée aux autres.</p>
+      <p class="doux">Un virement instantané arrive en quelques secondes. Si un autre paiement arrive après, il est remboursé en totalité
+      (article 11 des conditions générales).</p>
+      <p><a class="bouton plein" href="#demande">Vérifier si votre lot est libre</a></p>
+    </div>
+    <div class="pile etapes-bloc">
+      <h3>Comment ça se passe</h3>
+      <ol class="etapes">
+        <li><b>Vous envoyez l'avis</b> ou le lien du dossier de consultation.</li>
+        <li><b>Pré-analyse offerte sous 24&nbsp;h</b>&nbsp;: critères, pièges, pièces éliminatoires, et notre avis franc sur vos chances.</li>
+        <li><b>Devis, puis paiement</b>&nbsp;: votre paiement réserve le lot. Vous recevez un questionnaire déjà pré-rempli, à corriger en 30 minutes environ.</li>
+        <li><b>Version 1 sous 24&nbsp;h, version finale sous 72&nbsp;h</b>, avec la matrice de conformité et la checklist de dépôt.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="cadre">
+  <div class="pile">
+    <h2>Ce que vous déposez, prêt à l'emploi</h2>
+    <ul class="livrables">
+      <li><h3>Le mémoire technique</h3><p>Au format Word, modifiable, structuré sur les sous-critères, avec un encadré d'engagements mesurables par chapitre. Il respecte le cadre de réponse et la limite de pages s'ils sont imposés.</p></li>
+      <li><h3>La matrice de conformité</h3><p>Chaque exigence du règlement et du cahier des charges, et la page du mémoire qui y répond.</p></li>
+      <li><h3>La checklist de dépôt</h3><p>Pièces administratives, signatures, formats, heure limite exacte&nbsp;: tout ce que l'acheteur attend, coché avant le dépôt.</p></li>
+      <li><h3>L'analyse du dossier</h3><p>Critères et pondérations, pièces éliminatoires, clauses à risque. Si le marché ne vous convient pas, nous vous le disons avant que vous payiez.</p></li>
+      <li><h3>Le retour après résultat</h3><p>Gagné ou perdu, nous vous aidons à obtenir vos notes et les motifs de l'acheteur, et nous les lisons avec vous pour préparer le marché suivant.</p></li>
+    </ul>
+    <div class="exemples">
+      <a class="bouton creux" href="exemples/Memoire-technique_EXEMPLE_Proprete.pdf">Mémoire exemple (PDF, 10 pages)</a>
+      <a class="bouton creux" href="exemples/Pre-analyse_EXEMPLE_Proprete.pdf">Pré-analyse exemple (PDF, 1 page)</a>
+    </div>
+  </div>
+</section>
+
+<section class="cadre">
+  <div class="pile">
+    <h2>Notre règle&nbsp;: rien d'inventé.</h2>
+    <p>Chaque chiffre, référence, effectif et engagement du mémoire vient de vous. Ce qui manque est surligné dans la première version, puis réglé avec vous avant la version finale&nbsp;:</p>
+    <p class="citation">Une équipe de <mark>[À CONFIRMER&nbsp;: nombre d'agents affectés]</mark> agents interviendra chaque jour, encadrée par un chef d'équipe présent sur site.</p>
+    <p>Une fausse déclaration peut écarter une offre ou faire résilier un marché. Nous ne prenons pas ce risque à votre place.</p>
+  </div>
+</section>
+
+<section class="cadre">
+  <div class="pile">
+    <h2>Un prix fixe, connu avant toute commande</h2>
+    <p class="repere">Un marché de 200&nbsp;000&nbsp;€ sur 4 ans, c'est 50&nbsp;000&nbsp;€ de chiffre d'affaires par an. Le mémoire, qui pèse souvent près de la moitié de la note, coûte 890 €&nbsp;HT,
+    soit moins de 0,5&nbsp;% du montant, et des journées de rédaction rendues à votre encadrement.</p>
+    <div class="table-wrap"><table class="tarifs">
+      <tr class="courant"><td>Mémoire 72h : procédure adaptée, lot unique<small>Le cas le plus courant pour les marchés des communes</small></td><td>890 €&nbsp;HT</td></tr>
+      <tr><td>Procédure formalisée ou marché à plusieurs lots<small>Lot principal ; chaque mémoire de lot supplémentaire : + 50&nbsp;%</small></td><td>1 690 €&nbsp;HT</td></tr>
+      <tr><td>Délai de remise inférieur à 7 jours<small>Seulement si la livraison reste réaliste : nous vous le disons franchement</small></td><td>+ 30&nbsp;%</td></tr>
+      <tr><td>Cellule appels d'offres<small>Veille de vos marchés, analyses illimitées, deux mémoires par mois, sans engagement de durée</small></td><td>1 490 €&nbsp;/ mois</td></tr>
+    </table></div>
+    <p class="doux">Prix hors taxes, TVA 20&nbsp;% en sus. 50&nbsp;% à la commande, le solde à la livraison de la version finale, avant le dépôt&nbsp;; en procédure adaptée, règlement intégral possible à la commande avec 3&nbsp;% de remise. La pré-analyse d'un marché est offerte, et nous vérifions avant tout devis que le marché vous est accessible.</p>
+    <p><a class="bouton plein" href="#demande">Recevoir ma pré-analyse offerte</a></p>
+    <p><b>Vos garanties&nbsp;:</b> l'exclusivité, un seul mémoire par lot, réservé au premier paiement reçu&nbsp;; la conformité, tout sous-critère oublié complété sans frais sous 24&nbsp;heures ouvrées s'il nous est signalé au plus tard 2&nbsp;jours ouvrés avant la date limite&nbsp;; la version 1 jugée avant de payer le solde&nbsp;; l'acompte remboursé si l'analyse complète révèle un obstacle invisible avant le devis&nbsp;; rien d'inventé&nbsp;; vos informations jamais réutilisées pour un autre client.</p>
+  </div>
+</section>
+
+<section class="cadre">
+  <div class="pile">
+    <h2>Les métiers que nous connaissons</h2>
+    <div class="metiers">
+      <div><h3>Propreté</h3><ul><li>Fréquences par zone et cadences au m²</li><li>Reprise du personnel, annexe 7 de la convention collective</li><li>Autocontrôles, contrôles contradictoires, traçabilité</li><li>Produits écolabellisés et méthodes à faible impact</li></ul></div>
+      <div><h3>Espaces verts</h3><ul><li>Calendrier saisonnier et gestion différenciée</li><li>Zéro phyto et biodiversité</li><li>Matériel électrique, qualifications des équipes</li><li>Déchets verts et sécurité des usagers</li></ul></div>
+      <div><h3>Informatique</h3><ul><li>Maintenance applicative, infogérance, support</li><li>Engagements de service et pilotage par indicateurs</li><li>Gouvernance, plan de transition, réversibilité</li><li>Équipe proposée et continuité des compétences</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="cadre" id="questions">
+  <div class="pile">
+    <h2>Questions fréquentes</h2>
+    <div>
+      <details><summary>Combien de temps cela vous prend-il&nbsp;?</summary><p>Environ 30 minutes&nbsp;: vous corrigez un questionnaire déjà pré-rempli avec les informations publiques de votre entreprise, et vous joignez les documents que vous avez déjà. Nous rédigeons tout le reste.</p></details>
+      <details><summary>Comment se règle la commande&nbsp;?</summary><p>Par virement&nbsp;: 50&nbsp;% à la commande, le solde quand la version finale est prête, avant le dépôt. Vous pouvez aussi tout régler à la commande, avec 3&nbsp;% de remise en procédure adaptée. Votre premier paiement reçu vous réserve le lot.</p></details>
+      <details><summary>Et si l'acheteur annule la consultation&nbsp;?</summary><p>Nous facturons seulement le travail réalisé, dans la limite de l'acompte, et nous remboursons le reste (article 10 des conditions générales).</p></details>
+      <details><summary>Qui dépose l'offre&nbsp;?</summary><p>Vous. Le prix, la signature et le dépôt sur la plateforme de l'acheteur restent sous votre responsabilité. Nous vous remettons tout ce qu'il faut, avec la checklist de dépôt.</p></details>
+      <details><summary>De quoi avez-vous besoin&nbsp;?</summary><p>Le dossier de consultation et vos réponses à un questionnaire court, que nous pré-remplissons avec les informations publiques de votre entreprise&nbsp;: vous corrigez et complétez, par écrit, sans rendez-vous. Joignez vos documents existants&nbsp;: plaquette, anciens mémoires, CV, attestations, liste du matériel.</p></details>
+      <details><summary>Utilisez-vous l'intelligence artificielle&nbsp;?</summary><p>Oui, pour lire les dossiers et préparer les premiers jets plus vite. Chaque ligne est ensuite relue et vérifiée contre le dossier et vos informations. Vos informations ne servent qu'à votre mémoire.</p></details>
+      <details><summary>Garantissez-vous que nous gagnerons&nbsp;?</summary><p>Non, personne ne le peut honnêtement&nbsp;: l'acheteur décide. Nous nous engageons sur un mémoire complet, précis et conforme&nbsp;: si un sous-critère ou une exigence du règlement manque, nous le complétons sans frais sous 24&nbsp;heures ouvrées, s'il nous est signalé au plus tard 2&nbsp;jours ouvrés avant la date limite de remise (article 8 des conditions générales). Si l'offre n'est pas retenue, nous vous aidons à demander les motifs du rejet et vos notes, pour faire mieux au marché suivant.</p></details>
+      <details><summary>Travaillez-vous aussi pour mes concurrents sur ce marché&nbsp;?</summary><p>Non. Nous ne rédigeons qu'un seul mémoire par lot&nbsp;: le premier candidat dont le paiement nous parvient, acompte ou totalité, réserve le lot et ferme la place aux autres. Si un autre paiement arrive ensuite, il est remboursé intégralement (article 11 des conditions générales). Conseil&nbsp;: un virement instantané réserve votre lot en quelques secondes.</p></details>
+      <details><summary>Mes informations restent-elles confidentielles&nbsp;?</summary><p>Oui. Elles servent uniquement à votre mémoire et ne sont jamais réutilisées pour un autre client, concurrent ou non.</p></details>
+      <details><summary>Où êtes-vous basés&nbsp;?</summary><p>En France. Nous travaillons à distance avec des PME de toute la France, outre-mer compris&nbsp;: vous envoyez le dossier, tout se fait ensuite par écrit, sans rendez-vous, et une visio est possible si vous la souhaitez. Pleine Note est une marque d'AM DATA, entreprise immatriculée à Paris (SIREN 939&nbsp;133&nbsp;781).</p></details>
+      <details><summary>Le délai est très court. Est-ce possible&nbsp;?</summary><p>En dessous de sept jours, nous regardons le dossier et vous répondons dans l'heure ouvrée&nbsp;: oui avec un calendrier précis, ou non si la qualité ne peut pas être tenue.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cadre">
+  <div class="contact pile">
+    <h2>Un marché en vue&nbsp;?</h2>
+    <p class="doux">Envoyez le lien de l'avis ou le dossier de consultation. Vous recevez la pré-analyse sous 24&nbsp;heures ouvrées, offerte, et nous vous disons si le marché vaut la peine.</p>
+    <form class="demande" id="demande" action="https://formsubmit.co/contact@pleinenote.fr" method="POST">
+      <input type="hidden" name="_subject" value="Demande de pré-analyse (site Pleine Note)">
+      <input type="hidden" name="_next" value="https://pleinenote.fr/merci.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Bonjour, nous avons bien reçu votre demande de pré-analyse. Nous lisons le dossier de consultation et vous envoyons la pré-analyse sous 24 heures ouvrées : critères, pièces éliminatoires, pièges, et notre avis franc sur vos chances. Un complément à nous transmettre ? Écrivez-nous à contact@pleinenote.fr. Bien cordialement, AM DATA · Pleine Note, 06 29 60 65 21">
+      <input type="text" name="_honey" class="pot" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label>Lien de l'avis ou référence du marché<input name="marche" required autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="next" placeholder="https://www.boamp.fr/… ou n° de l'avis"></label>
+      <label>Votre email professionnel<input name="email" type="email" required autocomplete="email" placeholder="nom@entreprise.fr"></label>
+      <label><span>Votre entreprise <i>(facultatif)</i></span><input name="entreprise" autocomplete="organization"></label>
+      <button class="bouton plein" type="submit">Recevoir ma pré-analyse offerte</button>
+      <p class="mention">Vos informations servent uniquement à vous répondre (voir les mentions légales). Vous préférez l'email&nbsp;?
+      <a href="mailto:contact@pleinenote.fr?subject=March%C3%A9%20%C3%A0%20analyser&body=Bonjour%2C%0A%0ALien%20de%20l%27avis%20ou%20du%20dossier%20de%20consultation%20%3A%20%0ADate%20limite%20de%20remise%20%3A%20%0AEntreprise%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci%20de%20m%27envoyer%20la%20pr%C3%A9-analyse.%0A">Écrire directement</a>.</p>
+    </form>
+    <div class="coord"><span>contact@pleinenote.fr</span><span>06 29 60 65 21</span></div>
+  </div>
+</section>
+</main>
+<div class="collant"><a class="bouton plein" href="#demande">Recevoir ma pré-analyse offerte</a></div>
+<footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">Conditions générales</a><a href="index.html#questions">Questions</a></nav></footer>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Pleine Note", "url": "https://pleinenote.fr", "description": "Rédaction de mémoires techniques pour marchés publics, prêts à déposer en 72 heures.", "email": "contact@pleinenote.fr", "areaServed": "FR", "parentOrganization": {"@type": "Organization", "name": "AM DATA", "taxID": "939133781"}, "address": {"@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR"}, "makesOffer": [{"@type": "Offer", "name": "Mémoire technique, procédure adaptée, lot unique", "price": "890", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "890", "priceCurrency": "EUR", "valueAddedTaxIncluded": false}}, {"@type": "Offer", "name": "Mémoire technique, procédure formalisée ou plusieurs lots", "price": "1690", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "1690", "priceCurrency": "EUR", "valueAddedTaxIncluded": false}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien de temps cela vous prend-il ?", "acceptedAnswer": {"@type": "Answer", "text": "Environ 30 minutes : vous corrigez un questionnaire déjà pré-rempli avec les informations publiques de votre entreprise, et vous joignez les documents que vous avez déjà. Nous rédigeons tout le reste."}}, {"@type": "Question", "name": "Comment se règle la commande ?", "acceptedAnswer": {"@type": "Answer", "text": "Par virement : 50 % à la commande, le solde quand la version finale est prête, avant le dépôt. Vous pouvez aussi tout régler à la commande, avec 3 % de remise en procédure adaptée. Votre premier paiement reçu vous réserve le lot."}}, {"@type": "Question", "name": "Et si l'acheteur annule la consultation ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous facturons seulement le travail réalisé, dans la limite de l'acompte, et nous remboursons le reste (article 10 des conditions générales)."}}, {"@type": "Question", "name": "Qui dépose l'offre ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous. Le prix, la signature et le dépôt sur la plateforme de l'acheteur restent sous votre responsabilité. Nous vous remettons tout ce qu'il faut, avec la checklist de dépôt."}}, {"@type": "Question", "name": "De quoi avez-vous besoin ?", "acceptedAnswer": {"@type": "Answer", "text": "Le dossier de consultation et vos réponses à un questionnaire court, que nous pré-remplissons avec les informations publiques de votre entreprise : vous corrigez et complétez, par écrit, sans rendez-vous. Joignez vos documents existants : plaquette, anciens mémoires, CV, attestations, liste du matériel."}}, {"@type": "Question", "name": "Utilisez-vous l'intelligence artificielle ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, pour lire les dossiers et préparer les premiers jets plus vite. Chaque ligne est ensuite relue et vérifiée contre le dossier et vos informations. Vos informations ne servent qu'à votre mémoire."}}, {"@type": "Question", "name": "Garantissez-vous que nous gagnerons ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, personne ne le peut honnêtement : l'acheteur décide. Nous nous engageons sur un mémoire complet, précis et conforme : si un sous-critère ou une exigence du règlement manque, nous le complétons sans frais sous 24 heures ouvrées, s'il nous est signalé au plus tard 2 jours ouvrés avant la date limite de remise (article 8 des conditions générales). Si l'offre n'est pas retenue, nous vous aidons à demander les motifs du rejet et vos notes, pour faire mieux au marché suivant."}}, {"@type": "Question", "name": "Travaillez-vous aussi pour mes concurrents sur ce marché ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Nous ne rédigeons qu'un seul mémoire par lot : le premier candidat dont le paiement nous parvient, acompte ou totalité, réserve le lot et ferme la place aux autres. Si un autre paiement arrive ensuite, il est remboursé intégralement (article 11 des conditions générales). Conseil : un virement instantané réserve votre lot en quelques secondes."}}, {"@type": "Question", "name": "Mes informations restent-elles confidentielles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Elles servent uniquement à votre mémoire et ne sont jamais réutilisées pour un autre client, concurrent ou non."}}, {"@type": "Question", "name": "Où êtes-vous basés ?", "acceptedAnswer": {"@type": "Answer", "text": "En France. Nous travaillons à distance avec des PME de toute la France, outre-mer compris : vous envoyez le dossier, tout se fait ensuite par écrit, sans rendez-vous, et une visio est possible si vous la souhaitez. Pleine Note est une marque d'AM DATA, entreprise immatriculée à Paris (SIREN 939 133 781)."}}, {"@type": "Question", "name": "Le délai est très court. Est-ce possible ?", "acceptedAnswer": {"@type": "Answer", "text": "En dessous de sept jours, nous regardons le dossier et vous répondons dans l'heure ouvrée : oui avec un calendrier précis, ou non si la qualité ne peut pas être tenue."}}]}</script></body></html>
