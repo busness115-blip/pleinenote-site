@@ -166,6 +166,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .demande .bouton{justify-self:start;cursor:pointer}
 .demande .mention{font-size:.9rem;color:color-mix(in srgb,var(--papier) 75%,var(--encre))}
 .demande .mention a{display:inline-block;padding-block:10px;margin-block:-10px}
+.demande-etat{margin-top:12px;padding:12px 14px;border-radius:8px;background:color-mix(in srgb,var(--papier) 12%,transparent);font-size:.95rem}
 .pot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .contact .coord{margin-top:8px}
 
@@ -345,6 +346,31 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
       <p class="mention">Vos informations servent uniquement à vous répondre (voir les mentions légales). Vous préférez l'email&nbsp;?
       <a href="mailto:contact@pleinenote.fr?subject=March%C3%A9%20%C3%A0%20analyser&body=Bonjour%2C%0A%0ALien%20de%20l%27avis%20ou%20du%20dossier%20de%20consultation%20%3A%20%0ADate%20limite%20de%20remise%20%3A%20%0AEntreprise%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AMerci%20de%20m%27envoyer%20la%20pr%C3%A9-analyse.%0A">Écrire directement</a>.</p>
     </form>
+    <p class="demande-etat" id="demande-etat" role="status" aria-live="polite" hidden></p>
+    <script>
+(function(){
+  var f=document.getElementById('demande'); if(!f||!window.fetch) return;
+  var etat=document.getElementById('demande-etat'), b=f.querySelector('button[type=submit]');
+  function repli(d){
+    var corps='Bonjour,\n\nLien de l\'avis ou référence du marché : '+d.get('marche')+'\nEntreprise : '+(d.get('entreprise')||'')+'\nEmail : '+d.get('email')+'\n\nMerci de m\'envoyer la pré-analyse.\n';
+    etat.hidden=false;
+    etat.innerHTML='Votre messagerie va s\'ouvrir avec la demande déjà rédigée : il ne reste qu\'à l\'envoyer. Rien ne s\'ouvre&nbsp;? Écrivez-nous à <a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a> avec le lien de l\'avis.';
+    location.href='mailto:contact@pleinenote.fr?subject='+encodeURIComponent('Demande de pré-analyse')+'&body='+encodeURIComponent(corps);
+  }
+  f.addEventListener('submit',function(e){
+    if(!f.checkValidity()) return;
+    e.preventDefault();
+    var d=new FormData(f); if(d.get('_honey')) return;
+    b.disabled=true; b.textContent='Envoi en cours…';
+    var c=window.AbortController?new AbortController():null, t=setTimeout(function(){ if(c) c.abort(); },9000);
+    fetch('https://formsubmit.co/ajax/contact@pleinenote.fr',{method:'POST',body:d,headers:{'Accept':'application/json'},signal:c?c.signal:undefined})
+      .then(function(r){ return r.json(); })
+      .then(function(j){ clearTimeout(t); if(j && (j.success===true||j.success==='true')) location.href='merci.html'; else repli(d); })
+      .catch(function(){ clearTimeout(t); repli(d); })
+      .finally(function(){ b.disabled=false; b.textContent='Recevoir ma pré-analyse offerte'; });
+  });
+})();
+</script>
     <div class="coord"><span>contact@pleinenote.fr</span><span>06 29 60 65 21</span></div>
   </div>
 </section>
