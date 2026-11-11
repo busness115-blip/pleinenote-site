@@ -1,4 +1,4 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta property="og:title" content="Mentions légales - Pleine Note"><meta property="og:description" content="Mémoire technique pour marché public, prêt à déposer en 72 h et calé sur la grille de notation. Propreté, espaces verts, informatique. Pré-analyse offerte."><link rel="canonical" href="https://pleinenote.fr/mentions-legales.html"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#17224A"><meta property="og:type" content="website"><meta property="og:url" content="https://pleinenote.fr/mentions-legales.html"><meta property="og:image" content="https://pleinenote.fr/image-partage.png"><meta property="og:locale" content="fr_FR"><meta name="twitter:card" content="summary_large_image"><title>Mentions légales - Pleine Note</title><meta name="description" content="Mémoire technique pour marché public, prêt à déposer en 72 h et calé sur la grille de notation. Propreté, espaces verts, informatique. Pré-analyse offerte."><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"><style>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta property="og:title" content="Mentions légales - Pleine Note"><meta property="og:description" content="Mémoire technique pour marché public, prêt à déposer en 72 h et calé sur la grille de notation. Propreté, espaces verts, informatique. Pré-analyse offerte."><link rel="canonical" href="https://pleinenote.fr/mentions-legales.html"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#17224A"><meta property="og:type" content="website"><meta property="og:url" content="https://pleinenote.fr/mentions-legales.html"><meta property="og:image" content="https://pleinenote.fr/image-partage.png"><meta property="og:locale" content="fr_FR"><meta name="twitter:card" content="summary_large_image"><title>Mentions légales - Pleine Note</title><meta name="description" content="Mémoire technique pour marché public, prêt à déposer en 72 h et calé sur la grille de notation. Propreté, espaces verts, informatique. Pré-analyse offerte."><meta name="claude:viewport-fit-sides" content="cover"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"><style>
 /* Concept : une page de dossier de consultation bien tenue - règle graduée des 72 heures, tampon « prêt à déposer », texte en colonne étroite. */
 :root{
   --papier:#F4F5F2; --surface:#FFFFFF; --encre:#17224A; --encre-douce:#4A5370; --filet:#D5D9E2;
@@ -176,7 +176,34 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .texte h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:24px}
 .texte h2{font-size:1.25rem;margin:28px 0 8px;max-width:none}
 .texte p{margin-bottom:10px}
-</style></head><body><a class="evitement" href="#contenu">Aller au contenu</a><header class="entete cadre"><a class="marque" href="index.html">Pleine <span>Note</span></a><a class="bouton plein petit" href="index.html#demande">Pré-analyse offerte</a></header><main class="cadre" id="contenu"><article class="texte">
+
+/* Pages de référencement */
+.navlien{font-family:var(--f-titre);font-stretch:90%;font-weight:600;font-size:.95rem;text-decoration:none;margin-left:auto;margin-right:16px;padding-block:10px}
+.navlien:hover{color:var(--tampon)}
+.marque{white-space:nowrap}
+@media (max-width:480px){.navlien{display:none}}
+.article{padding-block:clamp(32px,6vw,64px) 24px}
+.article h1{font-size:clamp(2rem,5.4vw,3.4rem);max-width:20ch;margin-bottom:8px}
+.article .pile{gap:18px}
+.article h2{font-size:clamp(1.3rem,3vw,1.7rem);max-width:none;margin-top:22px}
+.article p,.article li,.article dd{max-width:var(--colonne)}
+.article ul,.article ol{margin:0;padding-left:1.3em;display:grid;gap:8px;max-width:var(--colonne)}
+.article dl{display:grid;gap:12px;margin:0;max-width:var(--colonne)}
+.article dt{font-family:var(--f-titre);font-weight:700;font-stretch:90%}
+.article dd{margin:0}
+.fil{font-family:var(--f-titre);font-stretch:90%;font-size:.9rem;color:var(--encre-douce);margin-bottom:6px}
+.fil a{color:inherit}
+.maj{font-size:.9rem;color:var(--encre-douce)}
+.comparatif{width:100%;border-collapse:collapse;font-size:1rem;font-variant-numeric:tabular-nums}
+.comparatif th,.comparatif td{padding:10px 12px;border-bottom:1px solid var(--filet);text-align:left;vertical-align:top}
+.comparatif th{font-family:var(--f-titre);font-stretch:90%;border-bottom:2px solid var(--encre)}
+.liens-lies{display:flex;flex-wrap:wrap;gap:10px 14px;list-style:none;margin:0;padding:0}
+.liens-lies a{display:inline-block;padding:10px 14px;border:1px solid var(--filet);border-radius:4px;text-decoration:none;font-family:var(--f-titre);font-stretch:92%;font-weight:600;font-size:.98rem;background:var(--surface)}
+.liens-lies a:hover{border-color:var(--tampon);color:var(--tampon)}
+.groupe{display:grid;gap:10px;margin-top:6px}
+.cta-bandeau{background:var(--surface);border:1px solid var(--filet);border-left:4px solid var(--tampon);border-radius:3px;padding:20px 22px;display:grid;gap:12px}
+.pied-liens{display:flex;flex-wrap:wrap;gap:8px 18px;width:100%}
+</style></head><body><a class="evitement" href="#contenu">Aller au contenu</a><header class="entete cadre"><a class="marque" href="index.html">Pleine <span>Note</span></a><a class="navlien" href="ressources.html">Guides</a><a class="bouton plein petit" href="index.html#demande">Pré-analyse offerte</a></header><main class="cadre" id="contenu"><article class="texte">
 <h1>Mentions légales</h1>
 <h2>Éditeur du site</h2>
 <p><strong>AM DATA</strong>, Abderrahim Mouloud, entrepreneur individuel (EI), marque Pleine Note<br>32 rue Boyer, 75020 Paris<br>SIREN 939133781 - SIRET 93913378100012 - APE 70.22Z<br>Dispensé d&#x27;immatriculation au RCS et au RM<br>
@@ -193,4 +220,4 @@ Email : contact@pleinenote.fr · Téléphone : 06 29 60 65 21<br>Directeur de la
 <p>Ce site ne dépose aucun cookie de suivi publicitaire.</p>
 <h2>Sources de données</h2>
 <p>BOAMP (DILA) et données essentielles de la commande publique (data.gouv.fr), sous Licence Ouverte Etalab.</p>
-</article></main><footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">Conditions générales</a><a href="index.html#questions">Questions</a></nav></footer></body></html>
+</article></main><footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">Conditions générales</a><a href="index.html#questions">Questions</a></nav><nav class="pied-liens" aria-label="Ressources"><a href="memoire-technique-marche-public.html">Mémoire technique</a><a href="redaction-memoire-technique.html">Rédaction</a><a href="prix-memoire-technique.html">Prix</a><a href="memoire-technique-proprete.html">Propreté</a><a href="memoire-technique-espaces-verts.html">Espaces verts</a><a href="memoire-technique-informatique.html">Informatique</a><a href="ressources.html">Guides</a><a href="glossaire-marches-publics.html">Glossaire</a></nav></footer></body></html>
