@@ -528,3 +528,219 @@ En général : le règlement de consultation, le cahier des clauses techniques p
 
 **Quelle est la pièce la plus importante pour bien répondre ?**
 Le règlement de consultation : il donne les critères, la pondération, les pièces à remettre et la date limite.
+
+## Faut-il répondre à cet appel d'offres ? La grille go / no go
+URL : https://pleinenote.fr/guide-repondre-ou-non-appel-offres.html
+
+Répondre à un marché public coûte du temps. Une bonne partie des pertes viennent de réponses lancées sans avoir vérifié que le marché était accessible. Huit questions à se poser avant d'écrire une ligne.
+
+### Les huit questions
+Le délai est-il tenable ? Comptez la rédaction, la relecture et le dépôt, avec de la marge. 
+ Les pièces éliminatoires sont-elles réunies ? Attestations, assurances, capacités demandées : une pièce manquante peut écarter l'offre. 
+ Les références exigées sont-elles atteignables ? Lisez le niveau demandé dans le règlement de consultation. 
+ La pondération vous est-elle favorable ? Avec 60 % de valeur technique, un bon mémoire compense un prix un peu plus haut ; avec 70 % de prix, c'est plus difficile. 
+ Le marché est-il dimensionné pour vous ? Effectifs, volume, zone géographique, reprise éventuelle du personnel. 
+ Pouvez-vous tenir les engagements demandés ? Niveaux de service, fréquences, horaires, pénalités. 
+ Le prix sera-t-il rentable ? Chiffrez avant de décider, pas après. 
+ Que valent vos chances face aux candidats probables ? Un titulaire sortant bien noté est difficile à déloger.
+
+### Dire non est une décision rentable
+Renoncer à un marché qui ne vous convient pas libère du temps pour ceux que vous pouvez gagner. C'est le but de notre pré-analyse offerte : lire le dossier, repérer les pièges et vous donner un avis franc avant que vous ne dépensiez quoi que ce soit.
+
+### Questions fréquentes
+
+**Combien de marchés faut-il viser par mois ?**
+Peu, mais bien choisis. Mieux vaut trois réponses soignées sur des marchés accessibles que dix mémoires bâclés.
+
+**Que faire si on n'a pas toutes les références demandées ?**
+Lire exactement ce que le règlement exige : certains marchés acceptent des références comparables ou des moyens équivalents. Voir le guide sur le premier marché.
+
+## La matrice de conformité : relier chaque exigence à sa réponse
+URL : https://pleinenote.fr/guide-matrice-conformite.html
+
+Une matrice de conformité est un tableau qui liste chaque exigence du dossier de consultation et indique où le mémoire y répond. Elle sert à vérifier, avant le dépôt, qu'aucune exigence n'a été oubliée.
+
+### Un modèle simple
+Source Exigence Réponse dans le mémoire État 
+ CCTP, art. X Fréquence ou niveau de service demandé Chapitre 3, page Y Traité 
+ RC, sous-critère 2 Contrôle qualité Chapitre 5 À confirmer avec l'entreprise
+
+### Comment la construire
+Parcourez le règlement de consultation, le CCTP et le CCAP, et relevez chaque exigence. 
+ Classez-les par source et par sous-critère. 
+ Pour chacune, notez le chapitre et la page du mémoire qui répondent. 
+ Relisez les lignes vides : ce sont les oublis avant le dépôt.
+
+### Pourquoi elle fait gagner des points
+Un sous-critère oublié est noté zéro. La matrice transforme une vérification fastidieuse en liste de contrôle. Nous la livrons avec chaque mémoire, avec la checklist de dépôt. Voir le plan type d'un mémoire .
+
+### Questions fréquentes
+
+**La matrice doit-elle être jointe à l'offre ?**
+Seulement si le règlement de consultation le demande. Dans le cas contraire, c'est un outil de contrôle interne, que l'on peut aussi joindre si le format le permet.
+
+**Qui doit la remplir ?**
+Celui qui rédige le mémoire, puis une seconde personne qui relit sans avoir écrit : c'est la meilleure façon de repérer un oubli.
+
+## Premier marché public : répondre quand on manque de références publiques
+URL : https://pleinenote.fr/guide-premier-marche-public-references.html
+
+Beaucoup de PME hésitent à répondre faute de références dans le secteur public. L'obstacle est souvent moins grand qu'il n'y paraît : tout dépend de ce que le règlement de consultation exige vraiment.
+
+### Lire ce qui est exigé
+Le règlement de consultation précise les références ou capacités demandées, parfois comme condition de candidature, parfois comme élément de notation. Distinguez les deux : une exigence éliminatoire ne se contourne pas, un élément noté se compense par un bon mémoire.
+
+### Valoriser des références comparables
+Des prestations réalisées pour des clients privés peuvent être présentées quand elles sont comparables par nature, par volume ou par complexité. Elles doivent être réelles et vérifiables : une fausse référence peut faire écarter l'offre ou résilier le marché.
+
+### Compenser par la précision du mémoire
+Sans références publiques, un mémoire très concret sur le site (effectifs, encadrement, calendrier, contrôles) rassure l'acheteur sur la capacité à exécuter. C'est précisément l'objet de la valeur technique.
+
+### Les autres leviers
+Se présenter avec des partenaires ou des sous-traitants, si le règlement le permet. 
+ Viser d'abord des marchés plus modestes en procédure adaptée, où l'exigence de références est généralement plus légère. Voir le mémoire technique en MAPA .
+
+### Questions fréquentes
+
+**Peut-on répondre sans aucune référence ?**
+Cela dépend du règlement de consultation. Certains marchés n'exigent pas de références, d'autres les demandent à un niveau précis : la pré-analyse permet de le vérifier avant d'investir du temps.
+
+**Peut-on présenter une référence d'un ancien employeur ?**
+Seulement si l'entreprise candidate peut honnêtement s'en prévaloir et si le règlement l'admet. En cas de doute, demandez à l'acheteur par la plateforme.
+
+## Rétroplanning d'une réponse à un appel d'offres public
+URL : https://pleinenote.fr/guide-planning-reponse-appel-offres.html
+
+La date limite de remise est ferme : une offre déposée après l'heure est rejetée. Un rétroplanning, calculé à partir de cette date, évite la course de la veille.
+
+### Un rétroplanning type
+Moment (avant la date limite) Étape 
+ Dès la publication Télécharger le dossier, lire le règlement et décider (go / no go) 
+ Rapidement Poser les questions à l'acheteur par la plateforme, dans le délai qu'il fixe 
+ Cœur du délai Réunir les informations de l'entreprise et rédiger le mémoire 
+ Deux à trois jours avant Relecture croisée, matrice de conformité, offre de prix 
+ La veille au plus tard Dépôt sur la plateforme, avec accusé de réception
+
+### Délais courts
+Quand la remise est à moins de 7 jours, le temps manque pour tout faire en interne. Notre offre prévoit alors un supplément de 30 %, uniquement si la qualité reste tenable : nous répondons dans l'heure ouvrée, oui avec un calendrier précis, ou non.
+
+### Les pièges du dépôt
+Une connexion lente ou une plateforme saturée en fin de journée. 
+ Des fichiers trop lourds ou dans un format non accepté. 
+ Une pièce oubliée découverte au moment du dépôt. 
+ Déposer la veille laisse le temps de corriger.
+
+### Questions fréquentes
+
+**Peut-on poser des questions à l'acheteur ?**
+Oui, généralement par la plateforme de dépôt, jusqu'à une date indiquée dans le règlement de consultation. Les réponses sont communiquées à tous les candidats.
+
+**Le délai de remise peut-il être prolongé ?**
+L'acheteur peut le prolonger et en informe tous les candidats. Ne comptez jamais dessus.
+
+## Engagements mesurables dans un mémoire technique : comment les formuler
+URL : https://pleinenote.fr/guide-engagements-mesurables-memoire.html
+
+L'acheteur ne note pas les intentions, il note ce qu'il pourra vérifier. Un engagement mesurable précise qui fait quoi, à quelle fréquence ou dans quel délai, et comment l'acheteur le contrôle.
+
+### La formule
+Qui + fait quoi + à quelle fréquence ou dans quel délai + comment l'acheteur le vérifie .
+
+### Des exemples de formulation
+Secteur Formulation vague Formulation mesurable (à adapter à vos moyens) 
+ Propreté Nous garantissons un service de qualité Le chef d'équipe contrôle chaque semaine les zones sur une fiche signée, transmise à l'acheteur 
+ Espaces verts Nous intervenons rapidement Toute branche tombée sur une voie est dégagée dans un délai que vous pouvez tenir, indiqué en heures 
+ Informatique Nous sommes très réactifs Prise en compte d'un incident bloquant dans un délai chiffré, rétablissement dans un délai chiffré, suivi par un tableau de bord mensuel 
+  Les valeurs chiffrées dépendent de chaque entreprise : n'engagez que ce que vous pouvez tenir.
+
+### Pourquoi c'est noté
+Un engagement chiffré est comparable d'un candidat à l'autre, vérifiable pendant le marché, et il est parfois repris dans le contrat. Il démontre aussi que l'entreprise a dimensionné son organisation. Voir le plan type , où chaque chapitre se termine par un encadré d'engagements.
+
+### Le piège
+Surenchérir. Un engagement intenable expose à des pénalités, voire à la résiliation. Mieux vaut un délai réaliste et respecté.
+
+### Questions fréquentes
+
+**Les engagements du mémoire ont-ils une valeur contractuelle ?**
+Le mémoire retenu peut être intégré aux pièces contractuelles selon le marché. Considérez que ce que vous écrivez vous engage.
+
+**Combien d'engagements par chapitre ?**
+Trois à cinq, précis, plutôt qu'une longue liste générale.
+
+## Marchés en lots : candidater à un lot, à plusieurs, ou à tous
+URL : https://pleinenote.fr/guide-lots-marche-public.html
+
+Un marché peut être divisé en lots que l'acheteur attribue séparément, ce qui permet aux PME de se positionner sur la partie qui leur correspond. En principe, les acheteurs publics passent leurs marchés en lots séparés, sauf exceptions justifiées.
+
+### Ce que cela change pour le mémoire
+Chaque lot est noté séparément : un mémoire par lot, adapté à ses exigences. 
+ Les lots peuvent avoir des critères et des pondérations différents. 
+ L'acheteur peut limiter le nombre de lots qu'un même candidat peut obtenir : le règlement le précise.
+
+### Faut-il répondre à plusieurs lots ?
+Cela multiplie les chances et la charge de travail. Répondre à plusieurs lots avec le même texte est une erreur : chaque lot décrit un périmètre, des sites ou des horaires propres. Notre tarification : le lot principal au prix de la procédure, chaque lot supplémentaire + 50 %. Voir les prix .
+
+### L'exclusivité par lot
+Chez Pleine Note, un seul mémoire est rédigé par lot : le premier candidat dont le paiement est reçu réserve le lot. Les concurrents sur le même lot sont refusés.
+
+### Questions fréquentes
+
+**Peut-on candidater à un lot sans candidater aux autres ?**
+Oui, sauf indication contraire du règlement de consultation : chaque lot fait l'objet d'une offre distincte.
+
+**Les lots ont-ils les mêmes critères de notation ?**
+Pas forcément. Lisez le règlement lot par lot.
+
+## Cadre de réponse imposé par l'acheteur : le remplir sans en sortir
+URL : https://pleinenote.fr/guide-cadre-de-reponse-memoire-technique.html
+
+Certains acheteurs fournissent un cadre de réponse technique : un document structuré à compléter, qui remplace le mémoire libre. Il facilite la comparaison des offres, et il se remplit à la lettre.
+
+### Les règles
+Utilisez le document de l'acheteur, sans modifier la structure. 
+ Respectez les limites de caractères ou de lignes quand elles existent. 
+ Répondez dans chaque case, même brièvement : une case vide peut être notée zéro. 
+ Ne renvoyez pas à une annexe si le règlement dit que seul le cadre est évalué.
+
+### Bien répondre dans un espace réduit
+Placez en premier l'engagement chiffré, puis la méthode en une ou deux phrases, puis la preuve. Pas d'introduction : l'évaluateur lit des dizaines de cadres.
+
+### Les erreurs courantes
+Changer la mise en page, joindre un mémoire libre en plus alors que le règlement ne l'accepte pas, répondre à côté de la question posée. Notre mémoire sait s'adapter à un cadre imposé : nous le rédigeons dans le format demandé. Voir la matrice de conformité .
+
+### Questions fréquentes
+
+**Peut-on ajouter des pièces au cadre de réponse ?**
+Seulement si le règlement de consultation l'autorise. Sinon, elles peuvent ne pas être lues, voire entraîner un rejet.
+
+**Un cadre de réponse est-il noté comme un mémoire ?**
+Oui : l'acheteur note le contenu du cadre selon les mêmes sous-critères.
+
+## Intelligence artificielle et mémoire technique : usages utiles et limites
+URL : https://pleinenote.fr/guide-ia-memoire-technique.html
+
+Les outils d'intelligence artificielle accélèrent la lecture des dossiers et la rédaction de premiers jets. Ils ne remplacent pas la connaissance de votre entreprise ni la vérification.
+
+### Ce que l'IA fait bien
+Lire un règlement et un cahier des charges et en extraire les critères et les exigences. 
+ Proposer un plan calé sur les sous-critères. 
+ Produire un premier jet à retravailler.
+
+### Ce qu'elle ne sait pas
+Vos effectifs, votre matériel, vos références, vos délais réels. Un texte généré sans ces informations est générique, et peut contenir des affirmations inventées : c'est un risque grave, car une fausse déclaration peut écarter l'offre ou faire résilier le marché.
+
+### Notre pratique
+Nous utilisons l'IA pour lire les dossiers et préparer les premiers jets plus vite. Chaque ligne est ensuite relue et vérifiée contre le dossier et vos informations, et ce qui manque est surligné à confirmer, jamais comblé. Vos informations ne servent qu'à votre mémoire. Voir les erreurs fréquentes .
+
+### Si vous l'utilisez vous-même
+Fournissez-lui vos vraies données, pas des généralités. 
+ Relisez chaque chiffre. 
+ Évitez d'y déposer des documents confidentiels sans en connaître les conditions d'usage.
+
+### Questions fréquentes
+
+**L'acheteur peut-il détecter un texte généré ?**
+Il détecte surtout un texte générique : sans détails propres au site, la note est faible, qu'il soit généré ou non.
+
+**Peut-on confier un mémoire entier à une IA ?**
+Ce n'est pas recommandé : la vérification des faits et des engagements reste indispensable.
