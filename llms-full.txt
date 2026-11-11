@@ -840,3 +840,296 @@ Non : le critère unique du prix est supprimé pour ces marchés.
 
 **Les marchés déjà publiés sont-ils concernés ?**
 Non : les marchés déjà publiés ou signés avant la date d'application restent soumis à l'ancien régime, reconductions comprises.
+
+## Répondre à un appel d'offres de nettoyage : la méthode pour une PME de propreté
+URL : https://pleinenote.fr/repondre-appel-offres-nettoyage.html
+
+Un marché de nettoyage de locaux se gagne sur trois terrains : un prix cohérent, des pièces administratives complètes et un mémoire technique précis. Voici comment aborder la réponse, dans l'ordre.
+
+### 1. Lire le dossier avant de chiffrer
+Repérez dans le règlement de consultation la pondération, les sous-critères et les pièces demandées, puis dans le cahier des charges les surfaces, les fréquences, les horaires et les éventuelles prestations ponctuelles. Si une liste du personnel à reprendre figure au dossier, elle pèse sur votre prix : voir la reprise du personnel .
+
+### 2. Dimensionner vos moyens
+À partir des surfaces et des fréquences, calculez les heures hebdomadaires, les effectifs, l'encadrement et le matériel. Ce dimensionnement alimente à la fois le prix et le mémoire : les deux doivent raconter la même organisation.
+
+### 3. Écrire le mémoire sur la grille
+En propreté, la valeur technique pèse en moyenne 42,6 % de la note, et au moins 40 % dans 65 % des marchés (51 grilles du BOAMP). Les sous-critères les plus fréquents : démarche environnementale, organisation et planning, contrôle qualité, moyens humains. Voir la page mémoire technique pour un marché de nettoyage .
+
+### 4. Vérifier et déposer
+Reprenez la matrice de conformité , vérifiez les pièces, déposez la veille de la date limite avec de la marge.
+
+### Un marché précis en vue ?
+Consultez les marchés de nettoyage en cours : pour chacun, la pré-analyse (critères, pièges, pièces éliminatoires, avis sur vos chances) est offerte, sous 24 heures ouvrées. Le mémoire est ensuite à partir de 890 € HT en procédure adaptée.
+
+### Questions fréquentes
+
+**Combien de temps faut-il pour répondre à un appel d'offres de nettoyage ?**
+Comptez plusieurs jours entre la lecture du dossier, le chiffrage, la rédaction et le dépôt. Pleine Note livre la version finale du mémoire 72 heures après réception de vos réponses.
+
+**Faut-il déjà avoir des références publiques ?**
+Cela dépend du règlement de consultation. Voir le guide sur le premier marché public.
+
+## Répondre à un appel d'offres d'espaces verts : méthode pour paysagistes et PME
+URL : https://pleinenote.fr/repondre-appel-offres-espaces-verts.html
+
+Les marchés d'entretien d'espaces verts valorisent la technique plus que la moyenne : le mémoire peut compenser un prix un peu plus élevé. Voici l'ordre de travail.
+
+### 1. Lire les surfaces, les sites et la forme du marché
+Relevez les sites, les surfaces, les fréquences et le type de marché : forfait, bons de commande, accord-cadre . Chaque forme demande une démonstration différente dans le mémoire.
+
+### 2. Construire le calendrier
+Un calendrier par site et par saison, rattaché aux surfaces du marché : tontes, tailles, désherbage, élagage, arrosage. C'est la pièce centrale du mémoire.
+
+### 3. Soigner la démarche environnementale
+Elle est un sous-critère dans 55 % des marchés d'espaces verts étudiés (69 grilles du BOAMP). Gestion différenciée, zéro phyto, matériel électrique, valorisation des déchets verts : voir le guide du critère environnemental .
+
+### 4. Chiffrer et déposer
+La valeur technique pèse en moyenne 49,2 % de la note et au moins 40 % dans 83 % des marchés. Voir le mémoire technique d'espaces verts .
+
+### Un marché précis en vue ?
+Les marchés d'espaces verts en cours sont listés chaque jour : la pré-analyse est offerte sous 24 heures ouvrées. Le mémoire est ensuite à partir de 890 € HT en procédure adaptée.
+
+### Questions fréquentes
+
+**Faut-il détailler le matériel dans la réponse ?**
+Oui quand un sous-critère porte sur les moyens : type, nombre, énergie, entretien des machines.
+
+**Comment répondre à plusieurs lots ?**
+Un mémoire adapté par lot : voir le guide sur les marchés en lots.
+
+## Répondre à un appel d'offres informatique : TMA, infogérance, support
+URL : https://pleinenote.fr/repondre-appel-offres-informatique-tma.html
+
+En informatique, la valeur technique pèse en moyenne 50,7 % de la note (50 grilles du BOAMP) et plus que le prix dans 54 % des marchés. C'est le métier où le mémoire compte le plus.
+
+### Ce qu'il faut démontrer
+Des engagements de service chiffrés par niveau de gravité. 
+ Un pilotage : indicateurs, comités, circuit d'escalade. 
+ Un plan de transition qui reprend l'existant sans rupture. 
+ La réversibilité en fin de marché. 
+ Une équipe identifiée, avec continuité des compétences.
+
+### Les documents à croiser
+Le mémoire doit rester cohérent avec le CCTP et le CCAP, et avec le cahier des clauses administratives générales qui s'applique (souvent le CCAG-TIC pour ces marchés). Voir le glossaire .
+
+### La démarche environnementale
+Elle est un sous-critère dans 64 % des marchés informatiques étudiés : sobriété numérique, durée de vie du matériel, hébergement. Voir le guide .
+
+### Aller plus loin
+Page détaillée : mémoire technique informatique . Marchés en cours : marchés informatiques . Pré-analyse offerte, puis mémoire à partir de 890 € HT en procédure adaptée et 1 690 € HT en procédure formalisée.
+
+### Questions fréquentes
+
+**Un ESN ou une PME informatique peut-elle répondre seule ?**
+Oui si le règlement le permet et si elle remplit les capacités demandées. Sinon, un groupement ou la sous-traitance peuvent être possibles : lisez le règlement de consultation.
+
+**Les SLA doivent-ils être repris tels quels du CCTP ?**
+Ils doivent au minimum respecter le CCTP. Un engagement supérieur, tenable et chiffré, peut valoir des points.
+
+## Modèle de mémoire technique pour marché public : la trame à suivre
+URL : https://pleinenote.fr/modele-memoire-technique.html
+
+Un modèle de mémoire technique sert de point de départ, jamais de texte à recopier : l'acheteur note la précision propre à son site. Voici la trame que nous utilisons, à adapter aux sous-critères du règlement de consultation.
+
+### La trame
+Compréhension du besoin : le site, les usages, les contraintes, en quelques lignes précises. 
+ Moyens humains : effectif affecté, qualifications, encadrement, remplacement des absents, formation. 
+ Organisation et méthode : planning, fréquences, modes opératoires, démarrage. 
+ Moyens matériels et produits : liste, entretien, renouvellement. 
+ Contrôle qualité : autocontrôles, indicateurs, traitement des écarts, reporting. 
+ Démarche environnementale et sociale : engagements chiffrés et indicateurs. 
+ Références : prestations comparables, réelles. 
+ À la fin de chaque chapitre : un encadré de trois à cinq engagements mesurables. Voir comment les formuler .
+
+### Comment adapter la trame
+Renommez les chapitres avec les intitulés exacts des sous-critères. 
+ Supprimez ce qui n'est pas demandé, ajoutez ce qui l'est. 
+ Remplacez chaque généralité par une donnée : effectifs, horaires, délais, noms de fonction.
+
+### Un exemple complet
+Un mémoire technique exemple de 10 pages (PDF) applique cette trame à un règlement fictif de propreté. Voir aussi la page des exemples .
+
+### Le piège du modèle
+Un modèle recopié sans données propres au site obtient une note faible. C'est ce que le guide des erreurs fréquentes décrit en premier.
+
+### Questions fréquentes
+
+**Existe-t-il un modèle officiel de mémoire technique ?**
+Non : chaque acheteur fixe ses sous-critères, et parfois un cadre de réponse. La trame sert de base, le règlement de consultation fait foi.
+
+**Un modèle gratuit suffit-il ?**
+Il structure le travail, mais la note dépend de la précision des moyens et des engagements. Pour gagner du temps, vous pouvez faire rédiger le mémoire.
+
+## Lire un règlement de consultation : les sept points à relever
+URL : https://pleinenote.fr/guide-lire-reglement-consultation.html
+
+Le règlement de consultation (RC) est la notice du candidat : il dit comment l'offre sera jugée. Dans certaines procédures adaptées, ces informations peuvent figurer dans l'avis ou dans une lettre de consultation. Dans tous les cas, c'est la première pièce à lire.
+
+### Les sept points
+La date et l'heure limites de remise des offres, et le mode de dépôt. 
+ Les critères et leur pondération : prix, valeur technique, éventuels critères environnementaux ou sociaux. 
+ Les sous-critères de la valeur technique, qui deviendront les chapitres du mémoire. 
+ Les pièces à remettre , pour la candidature et pour l'offre. 
+ Le cadre de réponse et la limite de pages, s'ils existent. Voir le guide . 
+ La méthode de notation du prix et de la technique. 
+ Les lots et les éventuelles limites du nombre de lots attribuables. Voir les lots .
+
+### Ce qui fait gagner du temps
+Surlignez les exigences au fur et à mesure et reportez-les dans une matrice de conformité . Notez les questions à poser à l'acheteur par la plateforme avant la date indiquée.
+
+### Le réflexe à avoir
+Lire la pondération avant tout : elle dit si le marché récompense la technique ou le prix. Voir les critères de notation .
+
+### Questions fréquentes
+
+**Que faire si le règlement est contradictoire avec le CCTP ?**
+Posez la question à l'acheteur par la plateforme avant la date limite : la réponse est communiquée à tous les candidats.
+
+**Le règlement de consultation est-il toujours fourni ?**
+Pas toujours sous ce nom : en procédure adaptée, les informations peuvent figurer dans l'avis ou une lettre de consultation.
+
+## Dossier de consultation des entreprises (DCE) : les pièces et l'ordre de lecture
+URL : https://pleinenote.fr/guide-lire-dossier-consultation-dce.html
+
+Le dossier de consultation des entreprises (DCE) rassemble les pièces que l'acheteur met à disposition des candidats sur sa plateforme. Les lire dans le bon ordre fait gagner des heures.
+
+### Les pièces habituelles
+Règlement de consultation (RC) : comment l'offre est jugée et remise. 
+ CCTP : les exigences techniques de la prestation. 
+ CCAP : les règles contractuelles propres au marché. 
+ Acte d'engagement : le document par lequel le candidat s'engage sur son offre. 
+ Documents de prix : BPU, DPGF ou équivalent. 
+ Annexes : plans, listes de sites, liste du personnel à reprendre le cas échéant. 
+ Les définitions sont dans le glossaire .
+
+### L'ordre de lecture conseillé
+L'avis et le règlement de consultation : date limite, pondération, pièces. 
+ Le CCTP : surfaces, fréquences, niveaux de service, obligations. 
+ Le CCAP : pénalités, durée, reconduction, révision des prix. 
+ Les documents de prix et les annexes.
+
+### Les pièges à repérer
+Une exigence éliminatoire cachée dans une annexe. 
+ Des pénalités disproportionnées dans le CCAP. 
+ Une contradiction entre le CCTP et le règlement, à signaler à l'acheteur. 
+ Notre pré-analyse offerte relève ces points : en savoir plus .
+
+### Questions fréquentes
+
+**Où télécharger le DCE ?**
+Sur le profil acheteur indiqué dans l'avis, généralement sans inscription obligatoire pour le télécharger. Voir où trouver les appels d'offres .
+
+**Faut-il lire tout le DCE avant de décider ?**
+Au minimum le règlement, le CCTP et les pénalités du CCAP : c'est ce qui décide du go ou du no go.
+
+## Pré-analyse offerte de votre appel d'offres, sous 24 heures ouvrées
+URL : https://pleinenote.fr/pre-analyse-appel-offres.html
+
+Avant de passer des heures sur un dossier, sachez s'il vaut la peine. Envoyez-nous le lien de l'avis : nous vous renvoyons, sans engagement, une pré-analyse d'une page.
+
+### Ce que contient la pré-analyse
+Les critères et leur pondération , avec le plan de mémoire qui en découle. 
+ Les pièces éliminatoires et les clauses à risque. 
+ Les pièges du dossier : délais, pénalités, exigences cachées. 
+ Les titulaires récents chez cet acheteur, quand ils sont publics. 
+ Notre avis franc sur vos chances, y compris quand nous vous déconseillons de répondre. 
+ Un exemple : pré-analyse exemple (PDF, 1 page) .
+
+### Comment l'obtenir
+Envoyez le lien de l'avis (ou le numéro BOAMP) avec le formulaire en bas de page. 
+ Vous la recevez par email sous 24 heures ouvrées. 
+ Si le marché vous convient, nous vous envoyons un devis. Sinon, vous n'avez rien payé.
+
+### Pour quels marchés ?
+Propreté, espaces verts et informatique. Vous n'avez pas de marché en tête ? Consultez les marchés en cours .
+
+### Questions fréquentes
+
+**La pré-analyse est-elle vraiment gratuite ?**
+Oui, offerte et sans engagement.
+
+**Que devient mon dossier ?**
+Vos informations servent uniquement à votre demande et ne sont jamais réutilisées pour un autre client.
+
+**Combien de temps faut-il pour la recevoir ?**
+Sous 24 heures ouvrées après votre demande.
+
+## Mémoire technique en délai court : ce qui est possible en 72 heures
+URL : https://pleinenote.fr/memoire-technique-delai-court-72h.html
+
+Un marché repéré tard, une date limite dans quelques jours : le mémoire technique ne doit pas être bâclé pour autant. Voici ce qui est réaliste, et ce qui ne l'est pas.
+
+### Comment c'est possible
+Pré-analyse du dossier sous 24 heures ouvrées. 
+ Un questionnaire déjà pré-rempli avec les informations publiques de votre entreprise : environ 30 minutes de votre temps. 
+ Version 1 sous 24 heures, version finale 72 heures après réception de vos réponses.
+
+### Les conditions
+Pour une remise à moins de 7 jours, le supplément est de 30 %, et seulement si la qualité reste tenable. Nous répondons dans l'heure ouvrée : oui avec un calendrier précis, ou non. Il vous faut aussi pouvoir répondre rapidement à nos questions : c'est le facteur qui décide du délai.
+
+### Ce qu'il faut préparer
+Le lien du dossier de consultation. 
+ Vos documents existants : plaquette, anciens mémoires, CV, attestations, liste du matériel. 
+ Vos effectifs et horaires réels pour le site. 
+ Pour décider vite d'y aller ou non, voir la grille go / no go . Tarifs : prix .
+
+### Questions fréquentes
+
+**Que se passe-t-il si le délai est trop court ?**
+Nous vous le disons dans l'heure ouvrée plutôt que de livrer un document médiocre.
+
+**Le dépôt est-il compris ?**
+Non : le prix, la signature et le dépôt restent de votre responsabilité, avec notre checklist de dépôt.
+
+## Accord-cadre à bons de commande : ce que cela change pour votre réponse
+URL : https://pleinenote.fr/guide-accord-cadre-bons-de-commande.html
+
+Un accord-cadre est un contrat qui fixe les règles des commandes à venir : l'acheteur émet ensuite des bons de commande ou passe des marchés subséquents, au fil de ses besoins. Il peut être conclu avec un seul opérateur (mono-attributaire) ou avec plusieurs (multi-attributaires).
+
+### Ce que cela change pour le mémoire
+Il faut démontrer une capacité à réagir quand la commande arrive, pas seulement un calendrier idéal. 
+ L'équipe et le matériel doivent être dimensionnés pour des commandes de taille variable. 
+ La méthode de réception, de planification, de réalisation et de contrôle d'une commande doit être claire.
+
+### Ce que cela change pour le prix
+Les quantités ne sont pas toujours certaines : l'acheteur peut fixer un minimum et un maximum, ou non. Lisez le règlement de consultation et les documents de prix pour savoir comment le prix sera jugé.
+
+### Mono ou multi-attributaires
+En mono-attributaire, un seul titulaire reçoit les commandes. En multi-attributaires, plusieurs titulaires sont retenus et les commandes sont réparties selon les règles de l'accord-cadre : lisez-les attentivement, elles décident de votre volume réel. 
+ Voir aussi répondre à un marché d'espaces verts et le glossaire .
+
+### Questions fréquentes
+
+**Un accord-cadre garantit-il un volume de commandes ?**
+Pas nécessairement : cela dépend de l'existence d'un minimum. Lisez les documents du marché.
+
+**Faut-il un mémoire différent pour un accord-cadre ?**
+Le mémoire répond aux mêmes sous-critères, mais il doit insister sur la réactivité et la méthode de traitement des commandes.
+
+## Cellule appels d'offres externalisée : la veille et les mémoires, au mois
+URL : https://pleinenote.fr/cellule-appels-offres-externalisee.html
+
+Pour les PME qui répondent régulièrement à des marchés publics, un abonnement mensuel évite de repartir de zéro à chaque consultation : un interlocuteur, une veille, des mémoires.
+
+### Ce que comprend l'abonnement
+La veille de vos marchés dans votre métier. 
+ Des analyses illimitées : critères, pièces éliminatoires, pièges, avis sur vos chances. 
+ Deux mémoires techniques par mois , avec matrice de conformité et checklist de dépôt. 
+ 1 490 € HT par mois, sans engagement de durée.
+
+### Pour qui ?
+Les entreprises de propreté , d' espaces verts et d' informatique qui répondent à plusieurs marchés par trimestre.
+
+### Comparaison avec la commande à l'unité
+Le prix à l'unité reste à partir de 890 € HT en procédure adaptée et 1 690 € HT en procédure formalisée. L'abonnement devient pertinent à partir de deux mémoires par mois. Voir tous les tarifs .
+
+### Ce qui ne change pas
+Un seul mémoire par lot : le premier paiement reçu réserve le lot. Rien d'inventé : chaque chiffre vient de vous.
+
+### Questions fréquentes
+
+**Faut-il s'engager sur une durée ?**
+Non : l'abonnement est sans engagement de durée.
+
+**Peut-on commencer par un seul mémoire ?**
+Oui, à l'unité, avec une pré-analyse offerte pour le premier marché.
