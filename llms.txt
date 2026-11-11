@@ -13,6 +13,10 @@
 
 ## Pages
 - [Accueil](https://pleinenote.fr/): offre, déroulé, tarifs, questions fréquentes, formulaire de demande
+- [Marchés publics de nettoyage et de propreté en cours](https://pleinenote.fr/marches-proprete-en-cours.html): avis du BOAMP en cours, mis à jour chaque jour
+- [Marchés publics d'entretien d'espaces verts en cours](https://pleinenote.fr/marches-espaces-verts-en-cours.html): avis du BOAMP en cours, mis à jour chaque jour
+- [Marchés publics informatiques en cours (infogérance, TMA)](https://pleinenote.fr/marches-informatique-en-cours.html): avis du BOAMP en cours, mis à jour chaque jour
+- [Marchés publics en cours](https://pleinenote.fr/marches-publics-en-cours.html): tous secteurs, mis à jour chaque jour
 - [Mémoire technique d'un marché public : ce que l'acheteur note vraiment](https://pleinenote.fr/memoire-technique-marche-public.html): Le mémoire technique d'un marché public décide souvent de l'attribution. Ce qu'il contient, comment il est noté, et comment le faire rédiger en 72 h.
 - [Faire rédiger son mémoire technique : dans quels cas, et comment choisir](https://pleinenote.fr/redaction-memoire-technique.html): Faire rédiger son mémoire technique d'appel d'offres : dans quels cas, ce qu'il faut exiger d'un rédacteur, et la méthode Pleine Note en 72 h.
 - [Combien coûte la rédaction d'un mémoire technique ?](https://pleinenote.fr/prix-memoire-technique.html): Prix fixes hors taxes de la rédaction d'un mémoire technique : 890 € HT en procédure adaptée, 1 690 € HT en procédure formalisée. Supplément, paiement, garanties.
