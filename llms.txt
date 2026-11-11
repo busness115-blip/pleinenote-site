@@ -38,6 +38,8 @@
 - [Marchés en lots : candidater à un lot, à plusieurs, ou à tous](https://pleinenote.fr/guide-lots-marche-public.html): Allotissement d'un marché public : qu'est-ce qu'un lot, peut-on candidater à plusieurs lots, un mémoire par lot ? Conseils pour les PME.
 - [Cadre de réponse imposé par l'acheteur : le remplir sans en sortir](https://pleinenote.fr/guide-cadre-de-reponse-memoire-technique.html): Quand l'acheteur impose un cadre de réponse, il faut le remplir tel quel. Règles, pièges, longueur et façon de répondre point par point.
 - [Intelligence artificielle et mémoire technique : usages utiles et limites](https://pleinenote.fr/guide-ia-memoire-technique.html): Peut-on utiliser l'intelligence artificielle pour rédiger un mémoire technique de marché public ? Usages utiles, risques, et vérification indispensable.
+- [Étude BOAMP : le mémoire technique pèse 48 % de la note d'un marché public](https://pleinenote.fr/etude-poids-memoire-technique-boamp.html): Étude Pleine Note de 170 grilles de notation publiées au BOAMP : poids moyen de la valeur technique, écarts par métier, critères les plus notés. Méthode ouverte.
+- [Critère environnemental obligatoire dans les marchés publics : comment répondre](https://pleinenote.fr/guide-critere-environnemental-marches-publics.html): Depuis le 21 août 2026, un critère environnemental est obligatoire dans les marchés publics. Ce qui change, ce que les acheteurs notent, comment répondre.
 - [Contenu complet en un seul fichier](https://pleinenote.fr/llms-full.txt)
 - [Conditions générales](https://pleinenote.fr/cgv.html)
 - [Mentions légales](https://pleinenote.fr/mentions-legales.html)

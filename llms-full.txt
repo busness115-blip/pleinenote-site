@@ -8,7 +8,7 @@ URL : https://pleinenote.fr/memoire-technique-marche-public.html
 Le mémoire technique est le document par lequel une entreprise explique à l'acheteur public comment elle exécutera le marché : qui intervient, avec quels moyens, selon quelle organisation, avec quels contrôles. L'acheteur le note, sous-critère par sous-critère, selon la grille publiée dans le règlement de consultation.
 
 ### Pourquoi il pèse autant que le prix
-Sur 161 grilles de notation publiées au BOAMP entre août et octobre 2026 pour des marchés de services, la valeur technique représente en moyenne 48 % de la note. C'est la seule partie de l'offre où une PME peut devancer un concurrent moins cher. Le guide des critères de notation montre sur un exemple chiffré comment une offre un peu plus chère peut passer devant.
+Sur 170 grilles de notation publiées au BOAMP entre le 31 juillet et le 3 novembre 2026 pour des marchés de propreté, d'espaces verts et d'informatique, la valeur technique représente en moyenne 48 % de la note ( voir l'étude ). C'est la seule partie de l'offre où une PME peut devancer un concurrent moins cher. Le guide des critères de notation montre sur un exemple chiffré comment une offre un peu plus chère peut passer devant.
 
 ### Ce que contient un bon mémoire technique
 Un chapitre par sous-critère , dans l'ordre du règlement de consultation, avec les mots de l'acheteur dans les titres. 
@@ -182,6 +182,9 @@ Moyens humains : effectifs affectés par site, horaires, encadrement, remplaceme
  Démarche environnementale : produits écolabellisés, dosage, gestion des déchets, méthodes à faible impact. 
  Matériel : machines, équipements, entretien et renouvellement.
 
+### Ce que disent les grilles de propreté
+Sur 51 grilles de marchés de nettoyage publiées au BOAMP entre le 31 juillet et le 3 novembre 2026, la valeur technique pèse en moyenne 42,6 % de la note (médiane 40 %), et au moins 40 % dans 65 % des marchés. Les sous-critères les plus fréquents : démarche environnementale (43 % des marchés), organisation et planning (31 %), qualité et contrôle (29 %), moyens humains (22 %), moyens matériels et produits (12 %). Voir l' étude complète .
+
 ### Les preuves attendues
 L'acheteur veut du concret rattaché à son site : le nombre d'agents et d'heures par semaine, le nom et la fonction du chef d'équipe, la fréquence de passage du contrôleur, le délai pour remplacer un agent absent, la liste des produits utilisés. Un tableau d'engagements chiffrés rapporte plus de points qu'un paragraphe sur l'engagement de l'entreprise.
 
@@ -215,6 +218,9 @@ Calendrier d'interventions : tontes, tailles, désherbage, élagage, arrosage, s
  Moyens humains et matériel : équipes, qualifications, matériel électrique ou thermique, entretien des machines. 
  Déchets verts et sécurité : valorisation, balisage, protection des usagers pendant les interventions.
 
+### Ce que disent les grilles d'espaces verts
+Sur 69 grilles de marchés d'espaces verts publiées au BOAMP entre le 31 juillet et le 3 novembre 2026, la valeur technique pèse en moyenne 49,2 % de la note (médiane 50 %), et au moins 40 % dans 83 % des marchés. La démarche environnementale est un sous-critère dans 55 % des marchés. Voir l' étude complète et le guide du critère environnemental .
+
 ### Ce qui fait la différence
 Un calendrier par site et par saison, rattaché aux surfaces du marché, vaut plus qu'une liste de prestations. L'acheteur veut savoir qui vient, quand, avec quoi, et comment il s'en assure. Les engagements de résultat (hauteur de tonte, délai de ramassage, passage de contrôle) apportent des points.
 
@@ -241,6 +247,9 @@ Engagements de service : délais de prise en compte et de rétablissement par ni
  Réversibilité : restitution des données et de la documentation en fin de marché. 
  Équipe proposée : profils, expérience, continuité de service, remplacement en cas d'absence. 
  Sécurité et données : respect du RGPD, hébergement, politique de sécurité de l'acheteur.
+
+### Ce que disent les grilles informatiques
+Sur 50 grilles de marchés informatiques publiées au BOAMP entre le 31 juillet et le 3 novembre 2026, la valeur technique pèse en moyenne 50,7 % de la note (médiane 55 %), et plus que le prix dans 54 % des marchés. Les sous-critères les plus fréquents : démarche environnementale (64 %), organisation et planning (20 %), qualité et contrôle (16 %), moyens humains (12 %). Voir l' étude complète .
 
 ### Les documents contractuels à connaître
 Les marchés de techniques de l'information et de la communication renvoient souvent au CCAG-TIC, le cahier des clauses administratives générales qui leur est propre. Le mémoire doit rester cohérent avec le CCTP et le CCAP du marché : un engagement en contradiction avec eux peut être pénalisé. Voir le glossaire des marchés publics .
@@ -303,7 +312,7 @@ Pour choisir l'offre économiquement la plus avantageuse, l'acheteur public s'ap
 Le prix des prestations. 
  La valeur technique , appréciée d'après le mémoire technique, souvent décomposée en sous-critères. 
  Parfois un critère de performance environnementale ou sociale , des délais ou une qualité de service. 
- Sur 161 grilles publiées au BOAMP entre août et octobre 2026 pour des marchés de services, la valeur technique pèse en moyenne 48 % de la note.
+ Sur 170 grilles publiées au BOAMP entre le 31 juillet et le 3 novembre 2026 pour des marchés de propreté, d'espaces verts et d'informatique, la valeur technique pèse en moyenne 48 % de la note ( détail de l'étude ).
 
 ### Les sous-critères
 La valeur technique se décompose généralement en sous-critères pondérés, par exemple : moyens humains, organisation, contrôle qualité, démarche environnementale. C'est autour d'eux que se construit le mémoire.
@@ -327,7 +336,7 @@ Lisez la pondération avant de décider de répondre.
 ### Questions fréquentes
 
 **Le prix peut-il être le seul critère ?**
-Dans certains cas la réglementation le permet, mais la plupart des marchés de services retiennent plusieurs critères. Le règlement de consultation indique ceux du marché visé.
+Plus pour les marchés lancés à partir du 21 août 2026 : selon le service public des entreprises, le critère unique du prix est supprimé et au moins un critère de notation doit être environnemental. Voir le guide sur le critère environnemental .
 
 **Où trouver les critères d'un marché ?**
 Dans le règlement de consultation, ou à défaut dans l'avis de publicité, tous deux joints ou référencés dans le dossier de consultation.
@@ -744,3 +753,90 @@ Il détecte surtout un texte générique : sans détails propres au site, la not
 
 **Peut-on confier un mémoire entier à une IA ?**
 Ce n'est pas recommandé : la vérification des faits et des engagements reste indispensable.
+
+## Étude BOAMP : le mémoire technique pèse 48 % de la note d'un marché public
+URL : https://pleinenote.fr/etude-poids-memoire-technique-boamp.html
+
+Combien pèse le mémoire technique dans la note d'un marché public ? Nous avons lu 17 571 avis de marché publiés au BOAMP entre le 31 juillet et le 3 novembre 2026. 1 175 concernaient la propreté, les espaces verts ou l'informatique. 170 d'entre eux publiaient leur grille de notation complète, avec les pondérations.
+
+### Résultat principal
+La valeur technique pèse en moyenne 47,7 % de la note (médiane 50 %). Dans 78 % des marchés étudiés, elle pèse au moins 40 % ; dans 44 %, elle pèse plus que le prix, et dans 16 % autant. Autrement dit, dans 60 % des cas, la technique compte au moins autant que le prix. 
+ Répartition des 170 grilles : technique à moins de 40 % dans 38 marchés ; de 40 à 49 % dans 31 ; exactement 50 % dans 27 ; de 51 à 60 % dans 53 ; à plus de 60 % dans 21.
+
+### Les écarts entre métiers
+Secteur Avis étudiés Grilles publiées Valeur technique, moyenne Médiane Technique à 40 % ou plus Technique supérieure au prix 
+ Propreté et nettoyage 382 51 42,6 % 40 % 65 % 35 % 
+ Espaces verts et paysage 467 69 49,2 % 50 % 83 % 42 % 
+ Prestations informatiques 326 50 50,7 % 55 % 84 % 54 % 
+  Ensemble  1 175  170  47,7 %  50 %  78 %  44 %  
+  La propreté donne plus de poids au prix ; l'informatique et les espaces verts valorisent davantage la technique.
+
+### Ce que les acheteurs notent dans la valeur technique
+Part des marchés dont un sous-critère porte sur chaque thème, tous secteurs : 
+  Thème de sous-critère Part des marchés 
+ Démarche environnementale 54 % 
+ Organisation, méthodologie, planning 18 % 
+ Qualité, contrôle, suivi 16 % 
+ Moyens humains, encadrement, remplacements 13 % 
+ Délais et réactivité 8 % 
+ Insertion et social 7 % 
+ Moyens matériels et produits 6 % 
+ Sécurité et prévention 2 % 
+  La démarche environnementale arrive en tête, dans plus d'un marché sur deux. Voir le guide sur le critère environnemental .
+
+### Ce que cela change pour une PME
+Dans la majorité des marchés, un bon mémoire peut compenser un prix un peu plus élevé : voir l' exemple chiffré . 
+ Un chapitre par sous-critère, avec les mots du règlement de consultation, suit la logique de la grille. 
+ Le chapitre environnemental ne se résume plus à un paragraphe de fin : il se note.
+
+### Méthode et limites
+Source : avis de marché du BOAMP (données ouvertes de la Direction de l'information légale et administrative), lus du 31 juillet au 3 novembre 2026. Les avis sont classés par secteur à partir de leur objet, de leurs descripteurs et de leurs codes CPV. Les pondérations sont lues dans les avis lorsqu'elles y figurent. 
+ Limite importante : 169 des 170 grilles proviennent de procédures formalisées. Les marchés à procédure adaptée publient rarement leur grille dans l'avis : elle se trouve dans le règlement de consultation. Les chiffres décrivent donc surtout les marchés formalisés, et non l'ensemble des marchés des communes. 
+ Chiffres citables avec mention de la source : Pleine Note, étude des critères de notation du BOAMP, 31 juillet au 3 novembre 2026.
+
+### Questions fréquentes
+
+**Combien pèse le mémoire technique dans la note d'un marché public ?**
+Sur 170 grilles de notation publiées au BOAMP entre le 31 juillet et le 3 novembre 2026, la valeur technique pèse en moyenne 47,7 % de la note, avec une médiane à 50 %.
+
+**La technique pèse-t-elle plus que le prix ?**
+Dans 44 % des marchés étudiés, la valeur technique pèse plus que le prix ; dans 16 %, autant. Dans 78 % des cas, elle pèse au moins 40 %.
+
+**Quel métier valorise le plus la technique ?**
+L'informatique (moyenne 50,7 %, médiane 55 %), suivie des espaces verts (49,2 %). En propreté, la moyenne est de 42,6 %.
+
+## Critère environnemental obligatoire dans les marchés publics : comment répondre
+URL : https://pleinenote.fr/guide-critere-environnemental-marches-publics.html
+
+Pour les marchés publics lancés à partir du 21 août 2026, selon le service public des entreprises, au moins un critère d'attribution doit être environnemental et pertinent au regard de l'objet du marché, et le critère unique du prix est supprimé. Cette obligation vient de l'article 35 de la loi Climat et Résilience.
+
+### Ce que prévoit la loi
+Un critère d'attribution environnemental : au moins un critère de notation porte sur l'environnement, en lien avec l'objet du marché. 
+ Une clause d'exécution environnementale : au moins une condition d'exécution de nature environnementale, exécutable et contrôlable pendant tout le marché. 
+ Ces obligations sont contractuelles : un manquement peut entraîner des pénalités ou une résiliation. 
+ Elles s'appliquent aux marchés passés à partir du 21 août 2026 ; les marchés déjà publiés ou signés avant restent sous l'ancien régime. 
+ Source : service public des entreprises. Vérifiez toujours le règlement de consultation du marché visé.
+
+### Ce que les acheteurs notaient déjà
+Dans notre étude de 170 grilles du BOAMP , la démarche environnementale est un sous-critère dans 54 % des marchés : 43 % en propreté, 55 % en espaces verts, 64 % en informatique.
+
+### Comment gagner des points
+Le paragraphe générique « nous trions nos déchets » ne rapporte pas de points. Ce qui en rapporte, parce que c'est vérifiable : 
+  Propreté : part des produits écolabellisés, dosage, matériel à faibles émissions, filière de traitement des déchets. 
+ Espaces verts : gestion différenciée, zéro phyto, matériel électrique, valorisation des déchets verts, gestion de l'eau. 
+ Informatique : sobriété numérique, durée de vie et reconditionnement du matériel, hébergement, consommation énergétique. 
+ Pour chaque point : un engagement chiffré, propre au site, avec un indicateur que vous transmettez à l'acheteur. Voir comment formuler des engagements mesurables .
+
+### Le risque à éviter
+Puisque la clause d'exécution est contractuelle, un engagement environnemental intenable expose à des pénalités. N'engagez que ce que vous pouvez mesurer et tenir.
+
+### Questions fréquentes
+
+**À partir de quand le critère environnemental est-il obligatoire ?**
+À partir du 21 août 2026 pour les marchés passés à compter de cette date, selon le service public des entreprises.
+
+**Le prix peut-il rester le seul critère ?**
+Non : le critère unique du prix est supprimé pour ces marchés.
+
+**Les marchés déjà publiés sont-ils concernés ?**
+Non : les marchés déjà publiés ou signés avant la date d'application restent soumis à l'ancien régime, reconductions comprises.
