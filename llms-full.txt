@@ -400,6 +400,9 @@ Reprenez les intitulés des sous-critères dans les titres.
 ### Vérifier avant d'envoyer
 Chaque sous-critère a son chapitre, chaque exigence du cahier des charges sa réponse, et les chiffres sont identiques d'un chapitre à l'autre. C'est le rôle de la matrice de conformité que nous livrons avec chaque mémoire.
 
+### Un plan calé sur ce que les acheteurs notent
+Dans les 170 grilles étudiées, la valeur technique pèse en moyenne 47,7 % de la note. Les thèmes de sous-critères les plus fréquents sont : démarche environnementale (54 % des marchés), organisation, méthodologie et planning (18 %), qualité, contrôle et suivi (16 %), moyens humains et encadrement (13 %), délais et réactivité (8 %). Prévoyez un chapitre par sous-critère de votre règlement, dans son ordre ; la étude des 170 grilles détaille ces chiffres et leurs limites.
+
 ### Questions fréquentes
 
 **Faut-il suivre l'ordre des sous-critères ?**
@@ -504,6 +507,9 @@ Le titre des chapitres, qui reprend les sous-critères.
  Les encadrés d'engagements, avec des chiffres. 
  Les parties surlignées : ce que l'entreprise doit confirmer. Rien n'est inventé. 
  Ces exemples sont des modèles fictifs : un vrai mémoire est toujours écrit avec les moyens et les références du client.
+
+### Comment lire un exemple à la lumière des grilles réelles
+Un exemple de mémoire n'a de valeur que s'il suit une grille. Comparez-le aux thèmes que les acheteurs notent le plus souvent dans notre étude des 170 grilles : démarche environnementale (54 % des marchés), organisation, méthodologie et planning (18 %), qualité, contrôle et suivi (16 %), moyens humains et encadrement (13 %), délais et réactivité (8 %). Puis demandez-vous si votre propre règlement de consultation les reprend, dans quel ordre et avec quels points.
 
 ### Questions fréquentes
 
@@ -618,6 +624,9 @@ Parcourez le règlement de consultation, le CCTP et le CCAP, et relevez chaque e
 ### Pourquoi elle fait gagner des points
 Un sous-critère oublié est noté zéro. La matrice transforme une vérification fastidieuse en liste de contrôle. Nous la livrons avec chaque mémoire, avec la checklist de dépôt. Voir le plan type d'un mémoire .
 
+### Ce que montrent les grilles publiées
+Dans notre étude des 170 grilles du BOAMP, les thèmes de sous-critères les plus fréquents sont : démarche environnementale (54 % des marchés), organisation, méthodologie et planning (18 %), qualité, contrôle et suivi (16 %), moyens humains et encadrement (13 %), délais et réactivité (8 %). Une matrice qui ne laisse aucun de ces thèmes sans réponse écrite couvre l'essentiel de ce que les acheteurs notent. La grille de votre marché prime toujours : lisez son règlement de consultation.
+
 ### Questions fréquentes
 
 **La matrice doit-elle être jointe à l'offre ?**
@@ -703,6 +712,9 @@ Un engagement chiffré est comparable d'un candidat à l'autre, vérifiable pend
 ### Le piège
 Surenchérir. Un engagement intenable expose à des pénalités, voire à la résiliation. Mieux vaut un délai réaliste et respecté.
 
+### Où placer ces engagements
+Les acheteurs notent surtout l'organisation, le contrôle de la qualité, les moyens humains et les délais : respectivement 18, 16, 13 et 8 % des marchés de notre étude des 170 grilles comportent un sous-critère sur ces thèmes. Ce sont les chapitres où un engagement chiffré (fréquence, délai, contrôle signé) se vérifie le mieux.
+
 ### Questions fréquentes
 
 **Les engagements du mémoire ont-ils une valeur contractuelle ?**
@@ -726,6 +738,9 @@ Cela multiplie les chances et la charge de travail. Répondre à plusieurs lots 
 
 ### L'exclusivité par lot
 Chez Pleine Note, un seul mémoire est rédigé par lot : le premier candidat dont le paiement est reçu réserve le lot. Les concurrents sur le même lot sont refusés.
+
+### Le poids du mémoire, lot par lot
+Chaque lot a sa propre grille de notation. Dans notre étude des 170 grilles , la valeur technique pèse en moyenne 47,7 % de la note, mais 42,6 % en propreté, 49,2 % en espaces verts et 50,7 % en informatique. Lisez la pondération de chaque lot avant de décider d'y répondre.
 
 ### Questions fréquentes
 
@@ -751,6 +766,9 @@ Placez en premier l'engagement chiffré, puis la méthode en une ou deux phrases
 
 ### Les erreurs courantes
 Changer la mise en page, joindre un mémoire libre en plus alors que le règlement ne l'accepte pas, répondre à côté de la question posée. Notre mémoire sait s'adapter à un cadre imposé : nous le rédigeons dans le format demandé. Voir la matrice de conformité .
+
+### Quels sujets prioriser dans un espace limité
+Quand la place manque, commencez par ce que la grille note. Dans l' étude des 170 grilles , la démarche environnementale figure dans 54 % des marchés, devant l'organisation (18 %) et la qualité (16 %). Vérifiez toujours les sous-critères et leurs points dans le règlement de consultation.
 
 ### Questions fréquentes
 
