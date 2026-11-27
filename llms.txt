@@ -1,0 +1,16 @@
+# Pleine Note
+
+> Service de réponse aux avis Google pour les commerces et entreprises de proximité en France. Chaque avis reçoit une réponse personnalisée, dans le ton de l'établissement, sous 24 heures. Les réponses aux avis de 1 à 3 étoiles ne sont publiées qu'après l'accord du dirigeant.
+
+- Offre Essentiel : 97 € HT par mois et par établissement.
+- Offre Premium : 197 € HT par mois et par établissement.
+- Premier mois offert, sans engagement.
+- Éditeur : AM DATA (SIREN 939 133 781), Paris. Contact : contact@pleinenote.fr
+
+## Pages
+
+- [Accueil](https://pleinenote.fr/)
+- [Activer le mois offert](https://pleinenote.fr/activer.html)
+- [Conditions du service](https://pleinenote.fr/conditions.html)
+- [Confidentialité](https://pleinenote.fr/confidentialite.html)
+- [Mentions légales](https://pleinenote.fr/mentions-legales.html)
