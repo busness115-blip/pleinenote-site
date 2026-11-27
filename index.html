@@ -437,7 +437,7 @@ document.querySelectorAll("form.formulaire").forEach(function(f){
       .then(function(r){ return r.text(); })
       .then(function(x){ clearTimeout(m); var j=null; try{ j=JSON.parse(x); }catch(err){}
         if(j && String(j.success)==="true"){ location.href=d._next; } else { natif(f,d); } })
-      .catch(function(){ clearTimeout(m); b.disabled=false; b.textContent=t; secours(f,d,"L'envoi n'a pas abouti : le service de formulaire ne répond pas depuis votre connexion."); });
+      .catch(function(){ clearTimeout(m); natif(f,d); });
   });
 });
 })();
