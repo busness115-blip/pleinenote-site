@@ -327,31 +327,45 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 </form>
 </article></main><footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="/conditions.html">Conditions du service</a><a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a></nav></footer><script>
 (function(){
-var DEST="contact@pleinenote.fr";
-function secours(f,d){
-  var NOMS={etablissement:"Établissement",ville:"Ville",email:"Email",prenom:"Prénom",adresse:"Adresse",fiche:"Fiche Google",societe:"Raison sociale et SIRET",nom:"Nom",formule:"Formule",validation:"Réponses à valider",ton:"Vos clients, vous les",signature:"Signature",consignes:"Consignes",email_validation:"Email de validation",acceptation:"Conditions"};
+var DEST="contact@pleinenote.fr", CLE="pn-envoi";
+var NOMS={etablissement:"Établissement",ville:"Ville",email:"Email",prenom:"Prénom",adresse:"Adresse",fiche:"Fiche Google",societe:"Raison sociale et SIRET",nom:"Nom",formule:"Formule",validation:"Réponses à valider",ton:"Vos clients, vous les",signature:"Signature",consignes:"Consignes",email_validation:"Email de validation",acceptation:"Conditions"};
+function lire(f){ var d={}; new FormData(f).forEach(function(v,k){ d[k]=(k in d)?d[k]+", "+v:v; }); return d; }
+function secours(f,d,texte){
   var lignes=[];
   Object.keys(d).forEach(function(k){ if(k.charAt(0)!=="_" && String(d[k]).trim()) lignes.push((NOMS[k]||k)+" : "+d[k]); });
   var lien="mailto:"+DEST+"?subject="+encodeURIComponent(d._subject||"Demande")+"&body="+encodeURIComponent(lignes.join("\n"));
   var box=f.querySelector(".secours");
   if(!box){ box=document.createElement("div"); box.className="secours"; box.setAttribute("role","alert"); f.appendChild(box); }
-  box.innerHTML="<p><strong>L'envoi n'a pas abouti.</strong> Le service de formulaire ne répond pas depuis votre connexion. Pour ne rien perdre, envoyez la même demande par email\u00a0: votre messagerie s'ouvre avec tout ce que vous avez saisi, il suffit d'appuyer sur Envoyer.</p>";
+  box.innerHTML="<p><strong>"+texte+"</strong> Pour ne rien perdre, envoyez la même demande par email\u00a0: votre messagerie s'ouvre avec tout ce que vous avez saisi, il suffit d'appuyer sur Envoyer.</p>";
   var a=document.createElement("a"); a.className="bouton plein"; a.href=lien; a.textContent="Envoyer ma demande par email"; box.appendChild(a);
   var p=document.createElement("p"); p.className="mention"; p.textContent="Ou écrivez-nous à "+DEST+"."; box.appendChild(p);
+  try{ localStorage.removeItem(CLE); }catch(e){}
   a.focus();
 }
+function natif(f,d){
+  try{ localStorage.setItem(CLE, JSON.stringify({page:location.pathname,d:d,t:Date.now()})); }catch(e){}
+  HTMLFormElement.prototype.submit.call(f);
+}
 document.querySelectorAll("form.formulaire").forEach(function(f){
+  try{
+    var en=JSON.parse(localStorage.getItem(CLE)||"null");
+    if(en && en.page===location.pathname && Date.now()-en.t<3600000){
+      Object.keys(en.d).forEach(function(k){ var c=f.querySelector("[name='"+k+"']:not([type=radio]):not([type=checkbox]):not([type=hidden])"); if(c && !c.value) c.value=en.d[k]; });
+      secours(f,en.d,"Votre dernier envoi n'a peut-être pas abouti.");
+    }
+  }catch(e){}
   f.addEventListener("submit",function(e){
     if(!window.fetch||!window.AbortController||!window.FormData) return;
     e.preventDefault();
-    var d={}; new FormData(f).forEach(function(v,k){ d[k]=(k in d)?d[k]+", "+v:v; });
+    var d=lire(f);
     if(d._honey) return;
     var b=f.querySelector("button[type=submit]"), t=b.textContent; b.disabled=true; b.textContent="Envoi en cours";
     var c=new AbortController(), m=setTimeout(function(){c.abort();},15000);
     fetch(f.action.replace("formsubmit.co/","formsubmit.co/ajax/"),{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(d),signal:c.signal})
-      .then(function(r){ return r.json(); })
-      .then(function(j){ clearTimeout(m); if(String(j.success)==="true"){ location.href=d._next; } else { throw new Error("refus"); } })
-      .catch(function(){ clearTimeout(m); b.disabled=false; b.textContent=t; secours(f,d); });
+      .then(function(r){ return r.text(); })
+      .then(function(x){ clearTimeout(m); var j=null; try{ j=JSON.parse(x); }catch(err){}
+        if(j && String(j.success)==="true"){ location.href=d._next; } else { natif(f,d); } })
+      .catch(function(){ clearTimeout(m); b.disabled=false; b.textContent=t; secours(f,d,"L'envoi n'a pas abouti : le service de formulaire ne répond pas depuis votre connexion."); });
   });
 });
 })();
