@@ -289,6 +289,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .inclus li span{color:var(--encre-douce);font-size:1rem;line-height:1.5}
 .inclus li.premium{border-color:var(--tampon)}
 .inclus li em{justify-self:start;font-style:normal;font-family:var(--f-titre);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--tampon);color:#fff;padding:2px 8px;border-radius:999px}
+.secours{display:grid;gap:10px;padding:16px;border:2px solid var(--tampon);border-radius:8px;background:var(--papier)}
+.secours p{margin:0}
 .pastille{justify-self:start;font-family:var(--f-titre);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--surligneur);color:var(--sur-surligneur);padding:3px 8px;border-radius:999px}
 </style></head><body><a class="evitement" href="#contenu">Aller au contenu</a><header class="entete cadre"><a class="marque" href="/" aria-label="Pleine Note, accueil">Pleine <span>Note</span></a><a class="navlien" href="#fonctionnement">Fonctionnement</a><a class="navlien" href="#inclus">Fonctionnalités</a><a class="navlien" href="#tarif">Tarif</a><a class="navlien" href="#questions">Questions</a><a class="bouton plein petit" href="/activer.html">Activer mon mois offert</a></header><main class="cadre" id="contenu">
 <section class="accueil heros">
@@ -395,4 +397,34 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <details><summary>Que faites-vous des données de mes clients&nbsp;?</summary><p>Nous traitons uniquement ce qui est nécessaire pour répondre aux avis (nom affiché, note, texte), pour votre compte, selon les <a href="/conditions.html">conditions du service</a>. Rien n'est vendu ni cédé.</p></details>
 <details><summary>Qui est derrière Pleine Note&nbsp;?</summary><p>Pleine Note est une marque d'AM DATA, entreprise individuelle française (SIREN 939&nbsp;133&nbsp;781). Une question&nbsp;? <a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a>, réponse sous 24&nbsp;h.</p></details>
 </section>
-</main><footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="/conditions.html">Conditions du service</a><a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a></nav></footer></body></html>
+</main><footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="/conditions.html">Conditions du service</a><a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a></nav></footer><script>
+(function(){
+var DEST="contact@pleinenote.fr";
+function secours(f,d){
+  var NOMS={etablissement:"Établissement",ville:"Ville",email:"Email",prenom:"Prénom",adresse:"Adresse",fiche:"Fiche Google",societe:"Raison sociale et SIRET",nom:"Nom",formule:"Formule",validation:"Réponses à valider",ton:"Vos clients, vous les",signature:"Signature",consignes:"Consignes",email_validation:"Email de validation",acceptation:"Conditions"};
+  var lignes=[];
+  Object.keys(d).forEach(function(k){ if(k.charAt(0)!=="_" && String(d[k]).trim()) lignes.push((NOMS[k]||k)+" : "+d[k]); });
+  var lien="mailto:"+DEST+"?subject="+encodeURIComponent(d._subject||"Demande")+"&body="+encodeURIComponent(lignes.join("\n"));
+  var box=f.querySelector(".secours");
+  if(!box){ box=document.createElement("div"); box.className="secours"; box.setAttribute("role","alert"); f.appendChild(box); }
+  box.innerHTML="<p><strong>L'envoi n'a pas abouti.</strong> Le service de formulaire ne répond pas depuis votre connexion. Pour ne rien perdre, envoyez la même demande par email\u00a0: votre messagerie s'ouvre avec tout ce que vous avez saisi, il suffit d'appuyer sur Envoyer.</p>";
+  var a=document.createElement("a"); a.className="bouton plein"; a.href=lien; a.textContent="Envoyer ma demande par email"; box.appendChild(a);
+  var p=document.createElement("p"); p.className="mention"; p.textContent="Ou écrivez-nous à "+DEST+"."; box.appendChild(p);
+  a.focus();
+}
+document.querySelectorAll("form.formulaire").forEach(function(f){
+  f.addEventListener("submit",function(e){
+    if(!window.fetch||!window.AbortController||!window.FormData) return;
+    e.preventDefault();
+    var d={}; new FormData(f).forEach(function(v,k){ d[k]=(k in d)?d[k]+", "+v:v; });
+    if(d._honey) return;
+    var b=f.querySelector("button[type=submit]"), t=b.textContent; b.disabled=true; b.textContent="Envoi en cours";
+    var c=new AbortController(), m=setTimeout(function(){c.abort();},15000);
+    fetch(f.action.replace("formsubmit.co/","formsubmit.co/ajax/"),{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(d),signal:c.signal})
+      .then(function(r){ return r.json(); })
+      .then(function(j){ clearTimeout(m); if(String(j.success)==="true"){ location.href=d._next; } else { throw new Error("refus"); } })
+      .catch(function(){ clearTimeout(m); b.disabled=false; b.textContent=t; secours(f,d); });
+  });
+});
+})();
+</script></body></html>
