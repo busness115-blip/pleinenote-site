@@ -219,7 +219,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .section h2{margin-bottom:14px}
 .section p{margin-bottom:10px}
 .etapes-liste{list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:var(--colonne)}
-.etapes-liste li{background:var(--surface);border:1px solid var(--filet);border-radius:6px;padding:16px 20px}
+.etapes-liste{counter-reset:e}
+.etapes-liste li{counter-increment:e;position:relative;background:var(--surface);border:1px solid var(--filet);border-radius:6px;padding:16px 20px 16px 58px}
+.etapes-liste li::before{content:counter(e);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--encre);color:var(--papier);display:grid;place-items:center;font-family:var(--f-titre);font-weight:800;font-size:.95rem}
 .offres{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));max-width:56rem;margin:8px 0 16px}
 .offre{background:var(--surface);border:1px solid var(--filet);border-radius:6px;padding:22px 24px;display:grid;gap:10px;align-content:start}
 .offre .prix{font-family:var(--f-titre);font-weight:750;font-size:2rem;line-height:1}
@@ -241,9 +243,47 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .mention{font-size:.92rem;color:var(--encre-douce)}
 .formulaire input[type=hidden]{display:none}
 @media (max-width:700px){.entete .navlien{display:none}.entete{gap:10px}}
+
+.heros{display:grid;gap:32px;align-items:center}
+@media (min-width:940px){.heros{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px}}
+.heros-texte h1{max-width:16ch}
+.atouts{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.atouts li{font-family:var(--f-titre);font-weight:600;font-size:.95rem;color:var(--encre);display:flex;align-items:center;gap:6px}
+.atouts li::before{content:"✓";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--surligneur);color:var(--sur-surligneur);font-size:.8rem;font-weight:800}
+.maquette{margin:0;display:grid;gap:10px}
+.maquette-etiquette{font-family:var(--f-titre);font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--encre-douce)}
+.maquette-note{font-size:.95rem;color:var(--encre-douce);margin:0}
+.carte-avis{background:#fff;border:1px solid var(--filet);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(23,34,74,.10);font-family:Arial,Helvetica,sans-serif;color:#202124}
+.carte-avis>p{margin:10px 0 0;line-height:1.5}
+.carte-avis .mention{font-family:var(--f-texte)}
+.avis-tete{display:flex;gap:12px;align-items:center}
+.avis-tete div{display:grid;gap:2px}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--tampon);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.etoiles{color:#E8A400;letter-spacing:2px;font-size:1rem}
+.etoiles .eteinte{color:#D5D9E2}
+.date{font-size:.85rem;color:#5f6368}
+.reponse-proprio{margin-top:14px;padding:12px 14px;background:#F4F5F2;border-radius:8px;border-left:3px solid var(--tampon)}
+.reponse-proprio strong{font-size:.9rem}
+.reponse-proprio p{margin:6px 0 0;line-height:1.5}
+.exemple.carte-avis{border-left:1px solid var(--filet);max-width:var(--colonne)}
+.etapes-grille{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+@media (min-width:800px){.etapes-grille{grid-template-columns:repeat(3,1fr)}}
+.etapes-grille li{background:var(--surface);border:1px solid var(--filet);border-radius:8px;padding:18px 20px}
+.etapes-grille strong{display:block;margin-bottom:6px}
+.num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--encre);color:var(--papier);font-family:var(--f-titre);font-weight:800;margin-bottom:10px}
+.parcours{list-style:none;padding:0;margin:18px 0;display:grid;gap:10px;max-width:var(--colonne);counter-reset:p}
+@media (min-width:800px){.parcours{grid-template-columns:repeat(3,1fr);max-width:none}}
+.parcours li{counter-increment:p;border-top:3px solid var(--tampon);padding:10px 2px 0;display:grid;gap:4px}
+.parcours li strong::before{content:counter(p) ". "}
+.parcours span{color:var(--encre-douce);font-size:.95rem}
+.offre{position:relative}
+.formulaire .groupe{margin:10px 0 -4px;font-family:var(--f-titre);font-weight:800;font-size:1.05rem;color:var(--tampon);border-top:1px solid var(--filet);padding-top:14px}
+.formulaire .groupe:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.section p+h2{margin-top:40px}
+.pastille{justify-self:start;font-family:var(--f-titre);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--surligneur);color:var(--sur-surligneur);padding:3px 8px;border-radius:999px}
 </style></head><body><a class="evitement" href="#contenu">Aller au contenu</a><header class="entete cadre"><a class="marque" href="index.html">Pleine <span>Note</span></a><a class="navlien" href="index.html#fonctionnement">Fonctionnement</a><a class="navlien" href="index.html#tarif">Tarif</a><a class="navlien" href="index.html#questions">Questions</a><a class="bouton plein petit" href="activer.html">Activer mon mois offert</a></header><main class="cadre" id="contenu"><article class="texte">
 <h1>C'est reçu, merci.</h1>
-<p>Vos trois réponses prêtes à publier arrivent par email sous 24&nbsp;heures ouvrées, depuis contact@pleinenote.fr. Pensez à vérifier vos courriers indésirables.</p>
+<p>Vos trois réponses prêtes à publier arrivent par email sous 24&nbsp;heures, depuis contact@pleinenote.fr. Pensez à vérifier vos courriers indésirables.</p>
 <p>Vous voulez que tous vos avis soient traités ainsi&nbsp;? Le premier mois est offert, sans engagement.</p>
 <p><a class="bouton plein" href="activer.html">Activer mon mois offert</a></p>
 </article></main><footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="conditions.html">Conditions du service</a><a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a></nav></footer></body></html>

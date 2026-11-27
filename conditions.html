@@ -219,7 +219,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .section h2{margin-bottom:14px}
 .section p{margin-bottom:10px}
 .etapes-liste{list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:var(--colonne)}
-.etapes-liste li{background:var(--surface);border:1px solid var(--filet);border-radius:6px;padding:16px 20px}
+.etapes-liste{counter-reset:e}
+.etapes-liste li{counter-increment:e;position:relative;background:var(--surface);border:1px solid var(--filet);border-radius:6px;padding:16px 20px 16px 58px}
+.etapes-liste li::before{content:counter(e);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--encre);color:var(--papier);display:grid;place-items:center;font-family:var(--f-titre);font-weight:800;font-size:.95rem}
 .offres{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));max-width:56rem;margin:8px 0 16px}
 .offre{background:var(--surface);border:1px solid var(--filet);border-radius:6px;padding:22px 24px;display:grid;gap:10px;align-content:start}
 .offre .prix{font-family:var(--f-titre);font-weight:750;font-size:2rem;line-height:1}
@@ -241,6 +243,44 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .mention{font-size:.92rem;color:var(--encre-douce)}
 .formulaire input[type=hidden]{display:none}
 @media (max-width:700px){.entete .navlien{display:none}.entete{gap:10px}}
+
+.heros{display:grid;gap:32px;align-items:center}
+@media (min-width:940px){.heros{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px}}
+.heros-texte h1{max-width:16ch}
+.atouts{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.atouts li{font-family:var(--f-titre);font-weight:600;font-size:.95rem;color:var(--encre);display:flex;align-items:center;gap:6px}
+.atouts li::before{content:"✓";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--surligneur);color:var(--sur-surligneur);font-size:.8rem;font-weight:800}
+.maquette{margin:0;display:grid;gap:10px}
+.maquette-etiquette{font-family:var(--f-titre);font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--encre-douce)}
+.maquette-note{font-size:.95rem;color:var(--encre-douce);margin:0}
+.carte-avis{background:#fff;border:1px solid var(--filet);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(23,34,74,.10);font-family:Arial,Helvetica,sans-serif;color:#202124}
+.carte-avis>p{margin:10px 0 0;line-height:1.5}
+.carte-avis .mention{font-family:var(--f-texte)}
+.avis-tete{display:flex;gap:12px;align-items:center}
+.avis-tete div{display:grid;gap:2px}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--tampon);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.etoiles{color:#E8A400;letter-spacing:2px;font-size:1rem}
+.etoiles .eteinte{color:#D5D9E2}
+.date{font-size:.85rem;color:#5f6368}
+.reponse-proprio{margin-top:14px;padding:12px 14px;background:#F4F5F2;border-radius:8px;border-left:3px solid var(--tampon)}
+.reponse-proprio strong{font-size:.9rem}
+.reponse-proprio p{margin:6px 0 0;line-height:1.5}
+.exemple.carte-avis{border-left:1px solid var(--filet);max-width:var(--colonne)}
+.etapes-grille{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+@media (min-width:800px){.etapes-grille{grid-template-columns:repeat(3,1fr)}}
+.etapes-grille li{background:var(--surface);border:1px solid var(--filet);border-radius:8px;padding:18px 20px}
+.etapes-grille strong{display:block;margin-bottom:6px}
+.num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--encre);color:var(--papier);font-family:var(--f-titre);font-weight:800;margin-bottom:10px}
+.parcours{list-style:none;padding:0;margin:18px 0;display:grid;gap:10px;max-width:var(--colonne);counter-reset:p}
+@media (min-width:800px){.parcours{grid-template-columns:repeat(3,1fr);max-width:none}}
+.parcours li{counter-increment:p;border-top:3px solid var(--tampon);padding:10px 2px 0;display:grid;gap:4px}
+.parcours li strong::before{content:counter(p) ". "}
+.parcours span{color:var(--encre-douce);font-size:.95rem}
+.offre{position:relative}
+.formulaire .groupe{margin:10px 0 -4px;font-family:var(--f-titre);font-weight:800;font-size:1.05rem;color:var(--tampon);border-top:1px solid var(--filet);padding-top:14px}
+.formulaire .groupe:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.section p+h2{margin-top:40px}
+.pastille{justify-self:start;font-family:var(--f-titre);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--surligneur);color:var(--sur-surligneur);padding:3px 8px;border-radius:999px}
 </style></head><body><a class="evitement" href="#contenu">Aller au contenu</a><header class="entete cadre"><a class="marque" href="index.html">Pleine <span>Note</span></a><a class="navlien" href="index.html#fonctionnement">Fonctionnement</a><a class="navlien" href="index.html#tarif">Tarif</a><a class="navlien" href="index.html#questions">Questions</a><a class="bouton plein petit" href="activer.html">Activer mon mois offert</a></header><main class="cadre" id="contenu"><article class="texte">
 <h1>Conditions du service</h1>
 <p class="mention">Version du 27 novembre 2026.</p>
@@ -249,9 +289,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <h2>2. Objet</h2>
 <p>Le Prestataire rédige et publie, pour le compte du Client, des réponses aux avis laissés sur la fiche d'établissement Google du Client (la «&nbsp;Fiche&nbsp;»), et fournit les services de la formule choisie.</p>
 <h2>3. Formules et prix</h2>
-<p><strong>Essentiel, 97&nbsp;€&nbsp;HT par mois et par établissement</strong> : réponse à tous les avis Google, validation par le Client des réponses aux avis de 1 à 3 étoiles, alerte en cas d'avis négatif, rapport mensuel.</p>
-<p><strong>Premium, 197&nbsp;€&nbsp;HT par mois et par établissement</strong> : Essentiel, plus supports de collecte d'avis conformes aux règles de Google, mise à jour mensuelle de la Fiche à partir des éléments fournis par le Client, suivi de trois concurrents dans le rapport.</p>
-<p>La TVA s'ajoute au taux en vigueur. Le premier mois, compté à partir de l'activation, est offert. La facturation commence le premier jour du deuxième mois, mensuellement et à terme à échoir, par prélèvement SEPA, après signature en ligne d'un mandat de prélèvement. Toute évolution de prix est notifiée par email au moins 30 jours avant son application ; le Client peut résilier avant cette date.</p>
+<p><strong>Essentiel, 97&nbsp;€&nbsp;HT par mois et par établissement</strong> : réponse à tous les avis Google, validation par le Client des réponses aux avis de 1 à 3 étoiles, alerte en cas d'avis négatif, rapport mensuel.</p>
+<p><strong>Premium, 197&nbsp;€&nbsp;HT par mois et par établissement</strong> : Essentiel, plus supports de collecte d'avis conformes aux règles de Google, mise à jour mensuelle de la Fiche à partir des éléments fournis par le Client, suivi de trois concurrents dans le rapport.</p>
+<p>La TVA s'ajoute au taux en vigueur. Le premier mois, compté à partir de l'activation, est offert. La facturation commence le premier jour du deuxième mois, mensuellement et à terme à échoir, par prélèvement SEPA, après signature en ligne d'un mandat de prélèvement. Toute évolution de prix est notifiée par email au moins 30 jours avant son application ; le Client peut résilier avant cette date.</p>
 <h2>4. Conclusion du contrat</h2>
 <p>Le contrat est conclu à distance lorsque le Client remplit le formulaire d'activation et coche la case d'acceptation des présentes conditions, ou lorsqu'il confirme son acceptation par email en indiquant la formule choisie. Le Prestataire confirme l'activation par email.</p>
 <h2>5. Durée et résiliation</h2>
@@ -261,13 +301,13 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <h2>7. Avis négatifs et avis sensibles</h2>
 <p>Pour tout avis de 1 à 3 étoiles, le Prestataire envoie au Client une proposition de réponse. Elle n'est publiée qu'après l'accord exprès du Client, ou dans la version rédigée par le Client. Sans accord, rien n'est publié. Les avis qui mettent en cause l'hygiène ou la santé, ou qui contiennent des insultes, des menaces ou une accusation grave, sont signalés au Client et ne reçoivent aucune réponse automatique.</p>
 <h2>8. Engagements du Client</h2>
-<p>Le Client ajoute contact@pleinenote.fr comme gestionnaire de la Fiche et le laisse en place pendant le contrat. Il fournit des informations exactes, valide ou refuse dans un délai raisonnable les propositions de réponse, et ne demande aucune pratique interdite par la loi ou par Google : faux avis, avis rémunérés ou récompensés, sollicitation des seuls clients satisfaits, dénigrement d'un concurrent.</p>
+<p>Le Client ajoute contact@pleinenote.fr comme gestionnaire de la Fiche et le laisse en place pendant le contrat. Il fournit des informations exactes, valide ou refuse dans un délai raisonnable les propositions de réponse, et ne demande aucune pratique interdite par la loi ou par Google : faux avis, avis rémunérés ou récompensés, sollicitation des seuls clients satisfaits, dénigrement d'un concurrent.</p>
 <h2>9. Autorisation d'accès à la Fiche</h2>
 <p>Le Client, propriétaire de la Fiche, autorise expressément le Prestataire à y accéder en tant que gestionnaire, dans le seul but d'exécuter le contrat. Il peut retirer cet accès à tout moment. À la fin du contrat, le Prestataire retire son propre accès sous 7 jours.</p>
 <h2>10. Responsabilité</h2>
 <p>Le Prestataire n'est pas responsable des décisions de Google (refus ou retrait d'une réponse, suspension de la Fiche, évolution du service), du contenu des avis laissés par des tiers, ni des réponses publiées dans la version validée ou rédigée par le Client. Sauf faute lourde ou intentionnelle, sa responsabilité totale est limitée aux sommes payées par le Client au cours des trois derniers mois.</p>
 <h2>11. Données personnelles</h2>
-<p>Le Prestataire traite pour le compte du Client les données contenues dans les avis (nom affiché de l'auteur, texte, note, date) et les coordonnées du contact du Client, en qualité de sous-traitant au sens de l'article 28 du RGPD. Il les traite uniquement sur instruction documentée du Client (le présent contrat et les échanges écrits), limite l'accès aux personnes autorisées, protège ses comptes par une double authentification, aide le Client à répondre aux demandes d'exercice de droits, l'informe de toute violation de données dans les 48 heures qui suivent sa découverte et supprime les données dans les 30 jours qui suivent la fin du contrat, sauf obligation légale. Sous-traitants ultérieurs : la messagerie et les outils de Google, l'hébergement et l'automatisation de GitHub, le service de formulaires FormSubmit, le fournisseur d'intelligence artificielle et le prestataire de prélèvement ; la liste à jour est communiquée sur simple demande. Les transferts hors de l'Union européenne sont encadrés par les garanties du chapitre V du RGPD (décision d'adéquation ou clauses contractuelles types). Le Client est informé de tout changement et peut s'y opposer.</p>
+<p>Le Prestataire traite pour le compte du Client les données contenues dans les avis (nom affiché de l'auteur, texte, note, date) et les coordonnées du contact du Client, en qualité de sous-traitant au sens de l'article 28 du RGPD. Il les traite uniquement sur instruction documentée du Client (le présent contrat et les échanges écrits), limite l'accès aux personnes autorisées, protège ses comptes par une double authentification, aide le Client à répondre aux demandes d'exercice de droits, l'informe de toute violation de données dans les 48 heures qui suivent sa découverte et supprime les données dans les 30 jours qui suivent la fin du contrat, sauf obligation légale. Sous-traitants ultérieurs : la messagerie et les outils de Google, l'hébergement et l'automatisation de GitHub, le service de formulaires FormSubmit, le fournisseur d'intelligence artificielle et le prestataire de prélèvement ; la liste à jour est communiquée sur simple demande. Les transferts hors de l'Union européenne sont encadrés par les garanties du chapitre V du RGPD (décision d'adéquation ou clauses contractuelles types). Le Client est informé de tout changement et peut s'y opposer.</p>
 <h2>12. Propriété des réponses</h2>
 <p>Une fois publiées, les réponses appartiennent au Client, qui peut les modifier ou les supprimer librement.</p>
 <h2>13. Contrat conclu hors établissement</h2>
