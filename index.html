@@ -437,7 +437,14 @@ document.querySelectorAll("form.formulaire").forEach(function(f){
       .then(function(r){ return r.text(); })
       .then(function(x){ clearTimeout(m); var j=null; try{ j=JSON.parse(x); }catch(err){}
         if(j && String(j.success)==="true"){ location.href=d._next; } else { natif(f,d); } })
-      .catch(function(){ clearTimeout(m); natif(f,d); });
+      .catch(function(){ clearTimeout(m);
+        // Le service est-il joignable depuis cette connexion ? Oui : envoi classique (il gère sa propre vérification anti-robots).
+        // Non (réseau ou nom de domaine bloqué) : secours par email tout de suite, sans page d'erreur.
+        var c2=new AbortController(), m2=setTimeout(function(){c2.abort();},6000);
+        fetch("https://formsubmit.co/?verif="+Date.now(),{mode:"no-cors",cache:"no-store",signal:c2.signal})
+          .then(function(){ clearTimeout(m2); natif(f,d); })
+          .catch(function(){ clearTimeout(m2); b.disabled=false; b.textContent=t; secours(f,d,"L'envoi n'a pas abouti : le service de formulaire est injoignable depuis votre connexion."); });
+      });
   });
 });
 })();
