@@ -291,6 +291,40 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .inclus li em{justify-self:start;font-style:normal;font-family:var(--f-titre);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--tampon);color:#fff;padding:2px 8px;border-radius:999px}
 .secours{display:grid;gap:10px;padding:16px;border:2px solid var(--tampon);border-radius:8px;background:var(--papier)}
 .secours p{margin:0}
+.valider{max-width:52rem;margin:0 auto;padding-bottom:110px}
+.v-entete{display:grid;gap:10px;justify-items:start;margin:10px 0 20px}
+.v-entete h1{margin:0}
+.v-sur{margin:0;font-family:var(--f-titre);font-weight:700;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--tampon)}
+.v-demo{margin:0;background:var(--surligneur);color:#17224A;padding:4px 10px;border-radius:6px;font-weight:600}
+.v-carte p,.v-carte blockquote{max-width:none}
+.v-choix{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
+.entete.simple{justify-content:space-between}
+.v-carte{background:var(--surface);border:1px solid var(--filet);border-left:5px solid var(--filet);border-radius:10px;padding:16px 18px;margin:0 0 14px;display:grid;gap:8px}
+.v-carte.publier{border-left-color:#1E7B34}.v-carte.modifier{border-left-color:var(--tampon)}.v-carte.refuser{border-left-color:#8A8F9E;opacity:.85}.v-carte.signaler{border-left-color:#B42318}
+.v-tete{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.v-ref{font-family:var(--f-titre);font-weight:800}
+.v-etoiles{color:#E8A400;letter-spacing:2px;font-size:1.1rem}
+.v-date{color:var(--encre-douce);font-size:.9rem}
+.v-label{margin:4px 0 0;font-family:var(--f-titre);font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--encre-douce)}
+.v-avis{margin:0;padding:10px 12px;background:var(--papier);border-radius:6px;font-style:italic}
+.v-priorite{margin:0;padding:8px 12px;background:#FDECEC;color:#8A1C12;border-radius:6px}
+.v-douteux{margin:0;padding:8px 12px;background:#FFF4D6;border-radius:6px;font-size:.95rem}
+.v-carte textarea{width:100%;box-sizing:border-box;font:inherit;line-height:1.5;padding:10px 12px;border:1px solid var(--filet);border-radius:6px;background:#fff;color:#17224A;resize:vertical;overflow:hidden;min-height:4.5em}
+.v-carte textarea[readonly]{background:var(--papier);border-color:transparent}
+.v-carte.modifier textarea{border:2px solid var(--tampon)}
+.v-aide{margin:0;font-size:.9rem;color:var(--tampon)}
+.v-choix{display:flex;flex-wrap:wrap;gap:8px}
+.v-choix button{font:inherit;font-family:var(--f-titre);font-weight:700;font-size:.95rem;padding:9px 14px;border-radius:8px;border:1.5px solid var(--filet);background:#fff;color:#17224A;cursor:pointer;min-height:44px}
+.v-choix button:hover{border-color:var(--tampon)}
+.v-choix button.actif{background:#17224A;border-color:#17224A;color:#fff}
+.v-carte.publier .v-choix button.actif{background:#1E7B34;border-color:#1E7B34}
+.v-carte.signaler .v-choix button.actif{background:#B42318;border-color:#B42318}
+.v-raison{font:inherit;padding:9px 12px;border:1px solid var(--filet);border-radius:6px}
+.v-barre{position:sticky;bottom:0;z-index:5;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--filet);border-radius:12px;padding:12px 16px;box-shadow:0 -6px 24px rgba(23,34,74,.12);margin-top:6px}
+.v-barre p{margin:0;font-size:.95rem;color:var(--encre-douce)}
+.v-barre button:disabled{opacity:.45;cursor:not-allowed}
+.v-fin{background:var(--surface);border:2px solid #1E7B34;border-radius:12px;padding:18px 20px;margin:16px 0}
+.v-fin h2{margin-top:0}
 .pastille{justify-self:start;font-family:var(--f-titre);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--surligneur);color:var(--sur-surligneur);padding:3px 8px;border-radius:999px}
 </style></head><body><a class="evitement" href="#contenu">Aller au contenu</a><header class="entete cadre"><a class="marque" href="/" aria-label="Pleine Note, accueil">Pleine <span>Note</span></a><a class="navlien" href="/#fonctionnement">Fonctionnement</a><a class="navlien" href="/#inclus">Fonctionnalités</a><a class="navlien" href="/#tarif">Tarif</a><a class="navlien" href="/#questions">Questions</a><a class="bouton plein petit" href="/activer.html">Activer mon mois offert</a></header><main class="cadre" id="contenu"><article class="texte">
 <h1>Conditions du service</h1>
