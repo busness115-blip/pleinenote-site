@@ -377,7 +377,7 @@ function choisir(ref,action){
   var carte=document.getElementById("c-"+ref);
   carte.querySelectorAll(".v-choix button").forEach(function(b){ var on=b.getAttribute("data-a")===action; b.className=on?"actif":""; b.setAttribute("aria-pressed",on?"true":"false"); });
   carte.className="v-carte "+action;
-  var ta=carte.querySelector("textarea"), raison=carte.querySelector(".v-raison");
+  var ta=carte.querySelector(".v-reponse"), raison=carte.querySelector(".v-raison");
   ta.readOnly=(action!=="modifier"); carte.querySelector(".v-aide").hidden=(action!=="modifier");
   if(action==="modifier"){ ta.focus(); ta.setSelectionRange(ta.value.length,ta.value.length); }
   raison.hidden=(action!=="refuser");
@@ -398,7 +398,7 @@ function carte(a){
   c.appendChild(el("blockquote",{"class":"v-avis"},a.x||"Note sans commentaire"));
   if(a.du){ c.appendChild(el("p",{"class":"v-douteux"},a.du)); }
   c.appendChild(el("p",{"class":"v-label"},"Réponse proposée"));
-  var ta=el("textarea",{rows:"2",maxlength:"1500","aria-label":"Réponse proposée pour "+a.r}); ta.value=a.p; ta.readOnly=true; c.appendChild(ta);
+  var ta=el("textarea",{"class":"v-reponse",rows:"2",maxlength:"1500","aria-label":"Réponse proposée pour "+a.r}); ta.value=a.p; ta.readOnly=true; c.appendChild(ta);
   var aide=el("p",{"class":"v-aide"},"Modifiez le texte ci-dessus : c'est votre version qui sera publiée, telle quelle."); aide.hidden=true; c.appendChild(aide);
   ta.addEventListener("input",function(){ (etat[a.r]||(etat[a.r]={})).texte=ta.value; ajuste(ta); });
   var choix=el("div",{"class":"v-choix",role:"group","aria-label":"Votre choix pour "+a.r});
@@ -417,7 +417,7 @@ function carte(a){
 function decisions(){
   return donnees.v.filter(function(a){ return etat[a.r]&&etat[a.r].action; }).map(function(a){
     var s=etat[a.r], d={ref:a.r,action:s.action};
-    if(s.action==="modifier"){ var t=document.querySelector("#c-"+a.r+" textarea").value.trim(); if(t===a.p.trim()) d.action="publier"; else d.texte=t; }
+    if(s.action==="modifier"){ var t=document.querySelector("#c-"+a.r+" .v-reponse").value.trim(); if(t===a.p.trim()) d.action="publier"; else d.texte=t; }
     if(s.action==="refuser"&&s.raison) d.raison=s.raison;
     if(s.action==="revoir") d.note=(s.note||"").trim();
     return d;
