@@ -289,6 +289,25 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .inclus li span{color:var(--encre-douce);font-size:1rem;line-height:1.5}
 .inclus li.premium{border-color:var(--tampon)}
 .inclus li em{justify-self:start;font-style:normal;font-family:var(--f-titre);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--tampon);color:#fff;padding:2px 8px;border-radius:999px}
+.comparatif{display:grid;gap:14px;margin:6px 0 0}
+@media (min-width:760px){.comparatif{grid-template-columns:1fr 1fr}}
+.comparatif>div{border-radius:10px;padding:18px 20px;border:1px solid var(--filet);background:var(--surface)}
+.comparatif .avec{border:2px solid var(--tampon)}
+.comparatif h3{margin:0 0 8px;font-size:1.1rem}
+.comparatif ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.comparatif .sans li{color:var(--encre-douce)}
+.apercus{display:grid;gap:18px;margin:10px 0 6px}
+@media (min-width:760px){.apercus{grid-template-columns:1fr 1fr}}
+.apercus figure{margin:0;display:grid;gap:8px}
+.apercus .cadre-image{max-height:520px;overflow:hidden;border:1px solid var(--filet);border-radius:14px;background:#F4F5F2;box-shadow:0 10px 30px rgba(23,34,74,.10);position:relative}
+.apercus .cadre-image::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(rgba(244,245,242,0),#F4F5F2)}
+.apercus img{display:block;width:100%;height:auto}
+.apercus figcaption{font-size:.95rem;color:var(--encre-douce)}
+.rassurance{margin:0;font-size:.95rem;color:var(--encre-douce)}
+.barre-mobile{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--filet);box-shadow:0 -6px 20px rgba(23,34,74,.12);display:none}
+.barre-mobile .bouton{width:100%;justify-content:center;text-align:center;box-sizing:border-box}
+@media (max-width:759px){.barre-mobile.visible{display:block}body.avec-barre{padding-bottom:76px}}
+@media print{.barre-mobile{display:none!important}}
 .secours{display:grid;gap:10px;padding:16px;border:2px solid var(--tampon);border-radius:8px;background:var(--papier)}
 .secours p{margin:0}
 .valider{max-width:52rem;margin:0 auto;padding-bottom:110px}
@@ -300,7 +319,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .v-choix{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
 .entete.simple{justify-content:space-between}
 .v-carte{background:var(--surface);border:1px solid var(--filet);border-left:5px solid var(--filet);border-radius:10px;padding:16px 18px;margin:0 0 14px;display:grid;gap:8px}
-.v-carte.publier{border-left-color:#1E7B34}.v-carte.modifier{border-left-color:var(--tampon)}.v-carte.refuser{border-left-color:#8A8F9E;opacity:.85}.v-carte.signaler{border-left-color:#B42318}
+.v-carte.publier{border-left-color:#1E7B34}.v-carte.modifier,.v-carte.revoir{border-left-color:var(--tampon)}.v-carte.refuser{border-left-color:#8A8F9E;opacity:.85}.v-carte.signaler{border-left-color:#B42318}
 .v-tete{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
 .v-ref{font-family:var(--f-titre);font-weight:800}
 .v-etoiles{color:#E8A400;letter-spacing:2px;font-size:1.1rem}
@@ -319,7 +338,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .v-choix button.actif{background:#17224A;border-color:#17224A;color:#fff}
 .v-carte.publier .v-choix button.actif{background:#1E7B34;border-color:#1E7B34}
 .v-carte.signaler .v-choix button.actif{background:#B42318;border-color:#B42318}
-.v-raison{font:inherit;padding:9px 12px;border:1px solid var(--filet);border-radius:6px}
+.v-raison,.v-note{font:inherit;padding:9px 12px;border:1px solid var(--filet);border-radius:6px;width:100%;box-sizing:border-box}
+.v-note{border:2px solid var(--tampon);resize:vertical}
+.v-auto{margin:0;padding:8px 12px;background:#EEF0FB;border-radius:6px;font-size:.95rem}
 .v-barre{position:sticky;bottom:0;z-index:5;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--filet);border-radius:12px;padding:12px 16px;box-shadow:0 -6px 24px rgba(23,34,74,.12);margin-top:6px}
 .v-barre p{margin:0;font-size:.95rem;color:var(--encre-douce)}
 .v-barre button:disabled{opacity:.45;cursor:not-allowed}
@@ -345,7 +366,7 @@ function lireDonnees(brut){
 }
 function params(){ var h=location.hash.replace(/^#/,""), o={}; h.split("&").forEach(function(x){ var i=x.indexOf("="); if(i>0) o[x.slice(0,i)]=decodeURIComponent(x.slice(i+1)); }); return o; }
 function etoiles(n){ return "★★★★★".slice(0,n)+"☆☆☆☆☆".slice(0,5-n); }
-var LIBELLES={publier:"Publier",modifier:"Modifier",refuser:"Ne pas publier",signaler:"Signaler à Google"};
+var LIBELLES={publier:"Publier",modifier:"Modifier",revoir:"Autre version",refuser:"Ne pas publier",signaler:"Signaler à Google"};
 function compte(){ var n=0; donnees.v.forEach(function(a){ if(etat[a.r]&&etat[a.r].action) n++; }); return n; }
 function majBarre(){
   var n=compte(), t=donnees.v.length, b=document.getElementById("v-envoyer"), r=document.getElementById("v-resume");
@@ -360,6 +381,7 @@ function choisir(ref,action){
   ta.readOnly=(action!=="modifier"); carte.querySelector(".v-aide").hidden=(action!=="modifier");
   if(action==="modifier"){ ta.focus(); ta.setSelectionRange(ta.value.length,ta.value.length); }
   raison.hidden=(action!=="refuser");
+  var note=carte.querySelector(".v-note"); note.hidden=(action!=="revoir"); if(action==="revoir") note.focus();
   majBarre();
 }
 function ajuste(t){ t.style.height="auto"; t.style.height=(t.scrollHeight+2)+"px"; }
@@ -380,13 +402,16 @@ function carte(a){
   var aide=el("p",{"class":"v-aide"},"Modifiez le texte ci-dessus : c'est votre version qui sera publiée, telle quelle."); aide.hidden=true; c.appendChild(aide);
   ta.addEventListener("input",function(){ (etat[a.r]||(etat[a.r]={})).texte=ta.value; ajuste(ta); });
   var choix=el("div",{"class":"v-choix",role:"group","aria-label":"Votre choix pour "+a.r});
-  ["publier","modifier","refuser"].concat(a.du?["signaler"]:[]).forEach(function(k){
+  ["publier","modifier","revoir","refuser"].concat(a.du?["signaler"]:[]).forEach(function(k){
     var b=el("button",{type:"button","data-a":k,"aria-pressed":"false"},LIBELLES[k]); b.addEventListener("click",function(){ choisir(a.r,k); }); choix.appendChild(b);
   });
   c.appendChild(choix);
   var raison=el("input",{"class":"v-raison",type:"text",placeholder:"Pourquoi ? (facultatif, pour nous améliorer)","aria-label":"Raison"}); raison.hidden=true;
   raison.addEventListener("input",function(){ (etat[a.r]||(etat[a.r]={})).raison=raison.value; });
   c.appendChild(raison);
+  var note=el("textarea",{"class":"v-note",rows:"2",maxlength:"500",placeholder:"Que faut-il changer ? Par exemple : plus court, plus chaleureux...","aria-label":"Ce qu'il faut changer"}); note.hidden=true;
+  note.addEventListener("input",function(){ (etat[a.r]||(etat[a.r]={})).note=note.value; });
+  c.appendChild(note);
   return c;
 }
 function decisions(){
@@ -394,10 +419,11 @@ function decisions(){
     var s=etat[a.r], d={ref:a.r,action:s.action};
     if(s.action==="modifier"){ var t=document.querySelector("#c-"+a.r+" textarea").value.trim(); if(t===a.p.trim()) d.action="publier"; else d.texte=t; }
     if(s.action==="refuser"&&s.raison) d.raison=s.raison;
+    if(s.action==="revoir") d.note=(s.note||"").trim();
     return d;
   });
 }
-function lignes(ds){ return ds.map(function(d){ return d.ref+" : "+LIBELLES[d.action].toLowerCase()+(d.texte?"\n"+d.texte:"")+(d.raison?" ("+d.raison+")":""); }).join("\n"); }
+function lignes(ds){ return ds.map(function(d){ return d.ref+" : "+LIBELLES[d.action].toLowerCase()+(d.texte?"\n"+d.texte:"")+(d.raison?" ("+d.raison+")":"")+(d.note?" ("+d.note+")":""); }).join("\n"); }
 function codeB64(s){ var u=new TextEncoder().encode(s), b=""; u.forEach(function(x){ b+=String.fromCharCode(x); }); return btoa(b).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""); }
 function confirmer(ds,secours){
   envoye=true; majBarre();
@@ -410,9 +436,10 @@ function confirmer(ds,secours){
   }
   box.appendChild(el("h2",null,"C'est noté, merci."));
   var ul=el("ul");
-  var n={publier:0,modifier:0,refuser:0,signaler:0}; ds.forEach(function(d){ n[d.action]++; });
+  var n={publier:0,modifier:0,revoir:0,refuser:0,signaler:0}; ds.forEach(function(d){ n[d.action]++; });
   if(n.publier) ul.appendChild(el("li",null,n.publier+" réponse"+(n.publier>1?"s":"")+" à publier telle"+(n.publier>1?"s":"")+" quelle"+(n.publier>1?"s":"")));
   if(n.modifier) ul.appendChild(el("li",null,n.modifier+" réponse"+(n.modifier>1?"s":"")+" à publier dans votre version"));
+  if(n.revoir) ul.appendChild(el("li",null,n.revoir+" nouvelle"+(n.revoir>1?"s":"")+" proposition"+(n.revoir>1?"s":"")+" à vous renvoyer"));
   if(n.refuser) ul.appendChild(el("li",null,n.refuser+" avis laissé"+(n.refuser>1?"s":"")+" sans réponse"));
   if(n.signaler) ul.appendChild(el("li",null,n.signaler+" avis à signaler à Google"));
   box.appendChild(ul);
@@ -444,7 +471,8 @@ function afficher(){
   var h=el("div",{"class":"v-entete"});
   h.appendChild(el("p",{"class":"v-sur"},"Validation de vos réponses"));
   h.appendChild(el("h1",null,donnees.v.length===1?"1 avis attend votre accord":donnees.v.length+" avis attendent votre accord"));
-  h.appendChild(el("p",{"class":"lead"},donnees.e+". Rien n'est publié sans votre accord."));
+  h.appendChild(el("p",{"class":"lead"},donnees.e+(donnees.au?".":". Rien n'est publié sans votre accord.")));
+  if(donnees.au) h.appendChild(el("p",{"class":"v-auto"},"Sans réponse de votre part, les réponses proposées seront publiées le "+donnees.au+", comme vous l'avez choisi. Les avis à lire en priorité attendent toujours votre accord."));
   if(donnees.demo) h.appendChild(el("p",{"class":"v-demo"},"Exemple fictif, pour découvrir la page."));
   var tout=el("button",{type:"button","class":"bouton plein"},"Tout publier tel quel");
   tout.addEventListener("click",function(){ donnees.v.forEach(function(a){ choisir(a.r,"publier"); }); document.getElementById("v-envoyer").focus(); });

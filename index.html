@@ -289,6 +289,25 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .inclus li span{color:var(--encre-douce);font-size:1rem;line-height:1.5}
 .inclus li.premium{border-color:var(--tampon)}
 .inclus li em{justify-self:start;font-style:normal;font-family:var(--f-titre);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--tampon);color:#fff;padding:2px 8px;border-radius:999px}
+.comparatif{display:grid;gap:14px;margin:6px 0 0}
+@media (min-width:760px){.comparatif{grid-template-columns:1fr 1fr}}
+.comparatif>div{border-radius:10px;padding:18px 20px;border:1px solid var(--filet);background:var(--surface)}
+.comparatif .avec{border:2px solid var(--tampon)}
+.comparatif h3{margin:0 0 8px;font-size:1.1rem}
+.comparatif ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.comparatif .sans li{color:var(--encre-douce)}
+.apercus{display:grid;gap:18px;margin:10px 0 6px}
+@media (min-width:760px){.apercus{grid-template-columns:1fr 1fr}}
+.apercus figure{margin:0;display:grid;gap:8px}
+.apercus .cadre-image{max-height:520px;overflow:hidden;border:1px solid var(--filet);border-radius:14px;background:#F4F5F2;box-shadow:0 10px 30px rgba(23,34,74,.10);position:relative}
+.apercus .cadre-image::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(rgba(244,245,242,0),#F4F5F2)}
+.apercus img{display:block;width:100%;height:auto}
+.apercus figcaption{font-size:.95rem;color:var(--encre-douce)}
+.rassurance{margin:0;font-size:.95rem;color:var(--encre-douce)}
+.barre-mobile{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--filet);box-shadow:0 -6px 20px rgba(23,34,74,.12);display:none}
+.barre-mobile .bouton{width:100%;justify-content:center;text-align:center;box-sizing:border-box}
+@media (max-width:759px){.barre-mobile.visible{display:block}body.avec-barre{padding-bottom:76px}}
+@media print{.barre-mobile{display:none!important}}
 .secours{display:grid;gap:10px;padding:16px;border:2px solid var(--tampon);border-radius:8px;background:var(--papier)}
 .secours p{margin:0}
 .valider{max-width:52rem;margin:0 auto;padding-bottom:110px}
@@ -300,7 +319,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .v-choix{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
 .entete.simple{justify-content:space-between}
 .v-carte{background:var(--surface);border:1px solid var(--filet);border-left:5px solid var(--filet);border-radius:10px;padding:16px 18px;margin:0 0 14px;display:grid;gap:8px}
-.v-carte.publier{border-left-color:#1E7B34}.v-carte.modifier{border-left-color:var(--tampon)}.v-carte.refuser{border-left-color:#8A8F9E;opacity:.85}.v-carte.signaler{border-left-color:#B42318}
+.v-carte.publier{border-left-color:#1E7B34}.v-carte.modifier,.v-carte.revoir{border-left-color:var(--tampon)}.v-carte.refuser{border-left-color:#8A8F9E;opacity:.85}.v-carte.signaler{border-left-color:#B42318}
 .v-tete{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
 .v-ref{font-family:var(--f-titre);font-weight:800}
 .v-etoiles{color:#E8A400;letter-spacing:2px;font-size:1.1rem}
@@ -319,7 +338,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .v-choix button.actif{background:#17224A;border-color:#17224A;color:#fff}
 .v-carte.publier .v-choix button.actif{background:#1E7B34;border-color:#1E7B34}
 .v-carte.signaler .v-choix button.actif{background:#B42318;border-color:#B42318}
-.v-raison{font:inherit;padding:9px 12px;border:1px solid var(--filet);border-radius:6px}
+.v-raison,.v-note{font:inherit;padding:9px 12px;border:1px solid var(--filet);border-radius:6px;width:100%;box-sizing:border-box}
+.v-note{border:2px solid var(--tampon);resize:vertical}
+.v-auto{margin:0;padding:8px 12px;background:#EEF0FB;border-radius:6px;font-size:.95rem}
 .v-barre{position:sticky;bottom:0;z-index:5;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--filet);border-radius:12px;padding:12px 16px;box-shadow:0 -6px 24px rgba(23,34,74,.12);margin-top:6px}
 .v-barre p{margin:0;font-size:.95rem;color:var(--encre-douce)}
 .v-barre button:disabled{opacity:.45;cursor:not-allowed}
@@ -330,9 +351,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <section class="accueil heros">
 <div class="heros-texte">
 <h1>Chaque avis Google reçoit sa réponse. Vous, vous ne touchez à rien.</h1>
-<p class="lead">Pleine Note répond à tous les avis Google de votre commerce ou de votre entreprise de proximité, dans votre ton, sous 24&nbsp;heures. Les réponses aux avis de 1 à 3 étoiles ne partent qu'après votre accord.</p>
+<p class="lead">Pleine Note répond à tous les avis Google de votre commerce ou de votre entreprise de proximité, dans votre ton, sous 24&nbsp;heures. Vous choisissez ce qui passe par vous avant publication : les avis négatifs, tous les avis, ou aucun.</p>
 <div class="actions"><a class="bouton plein" href="#essai">Recevoir 3 réponses offertes</a><a class="bouton creux" href="/activer.html">Activer mon mois offert</a></div>
-<ul class="atouts"><li>Réponse sous 24&nbsp;h</li><li>Avis négatifs validés par vous</li><li>Sans engagement</li><li>Aucun mot de passe à partager</li></ul>
+<ul class="atouts"><li>Réponse sous 24&nbsp;h</li><li>Validation à la carte</li><li>Sans engagement</li><li>Aucun mot de passe à partager</li></ul>
 </div>
 <figure class="maquette" aria-label="Exemple fictif d'un avis Google et de sa réponse">
 <figcaption class="maquette-etiquette">Exemple fictif</figcaption>
@@ -349,16 +370,36 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <h2>Comment ça marche</h2>
 <ol class="etapes-grille">
 <li><span class="num">1</span><strong>Vous activez le service en 2 minutes.</strong> Puis vous ajoutez contact@pleinenote.fr comme gestionnaire de votre fiche Google. Vous restez propriétaire et vous pouvez retirer cet accès à tout moment.</li>
-<li><span class="num">2</span><strong>Chaque nouvel avis reçoit une réponse personnalisée.</strong> 4 et 5 étoiles : publiée directement. 1 à 3 étoiles : vous recevez un email clair, puis en un clic vous publiez, modifiez ou écartez la réponse proposée. Rien ne part sans vous. <a href="/valider.html#exemple=1">Voir un exemple</a></li>
+<li><span class="num">2</span><strong>Chaque nouvel avis reçoit une réponse personnalisée.</strong> Par défaut, 4 et 5 étoiles : publiée directement ; 1 à 3 étoiles : vous recevez un email clair, puis en un clic vous publiez, modifiez, demandez une autre version ou écartez la réponse. Vous pouvez aussi tout valider, ou ne rien valider. <a href="/valider.html#exemple=1">Essayer avec un exemple</a></li>
 <li><span class="num">3</span><strong>Chaque mois, un rapport clair.</strong> Avis traités, évolution de votre note, ce que vos clients aiment et ce qu'ils reprochent.</li>
 </ol>
+</section>
+
+<section class="section" id="difference">
+<h2>Ce qui change pour vous</h2>
+<div class="comparatif">
+<div class="sans"><h3>Sans Pleine Note</h3><ul><li>Des avis restent sans réponse, parfois pendant des mois.</li><li>Les réponses s'écrivent le soir, à la hâte, quand il reste du temps.</li><li>Un avis négatif sans réponse reste la dernière version de l'histoire.</li><li>Personne ne regarde ce que les clients reprochent, mois après mois.</li></ul></div>
+<div class="avec"><h3>Avec Pleine Note</h3><ul><li>Chaque avis reçoit sa réponse sous 24&nbsp;heures, sans limite de nombre.</li><li>Les réponses sont écrites dans votre ton, avec un détail réel de l'avis.</li><li>Vous validez ce que vous voulez, en un clic, depuis votre téléphone.</li><li>Chaque mois, un rapport clair : votre note, vos avis, ce qui plaît, ce qui coince.</li></ul></div>
+</div>
+</section>
+
+<section class="section" id="apercu">
+<h2>Ce que vous recevez</h2>
+<p>Pas de logiciel à apprendre ni de tableau de bord à surveiller : tout arrive par email, lisible en quelques secondes sur téléphone.</p>
+<div class="apercus">
+<figure><div class="cadre-image"><img src="/img/email-validation.webp" width="600" height="1815" loading="lazy" alt="Exemple fictif d'email de validation : chaque avis, la réponse proposée et les boutons Publier, Modifier, Autre version, Ne pas publier"></div><figcaption>L'email de validation : un tableau, un bouton par choix. <a href="/valider.html#exemple=1">Essayer la page de validation</a></figcaption></figure>
+<figure><div class="cadre-image"><img src="/img/rapport-mensuel.webp" width="600" height="1653" loading="lazy" alt="Exemple fictif de rapport mensuel : note Google, avis reçus, taux de réponse, délai de réponse, répartition des notes"></div><figcaption>Le rapport mensuel : les chiffres d'abord, puis ce que disent vos clients.</figcaption></figure>
+</div>
+<p class="mention">Exemples fictifs.</p>
 </section>
 
 <section class="section" id="inclus">
 <h2>Tout ce qui est inclus</h2>
 <ul class="inclus">
-<li><strong>Chaque avis reçoit sa réponse sous 24&nbsp;h</strong><span>Personnalisée, dans votre ton : vouvoiement ou tutoiement, votre signature, vos expressions.</span></li>
-<li><strong>Les avis négatifs passent par vous</strong><span>Un email clair, une page sécurisée : publier, modifier ou ne pas publier, en un clic par avis. Vous pouvez aussi choisir de tout valider.</span></li>
+<li><strong>Tous vos avis, sans limite, sous 24&nbsp;h</strong><span>Personnalisés, dans votre ton : vouvoiement ou tutoiement, votre signature, vos expressions.</span></li>
+<li><strong>Validation à la carte</strong><span>Les avis négatifs (par défaut), tous, ou aucun. Un email clair, puis en un clic : publier, modifier, demander une autre version ou ne pas publier.</span></li>
+<li><strong>Chaque réponse contrôlée</strong><span>Avant publication : pas de promesse, pas de donnée personnelle, pas de formule copiée-collée, pas de reproche au client.</span></li>
+<li><strong>Les faux avis signalés</strong><span>Concurrent, hors sujet, propos injurieux : nous vous le signalons et, si vous le souhaitez, nous le signalons à Google.</span></li>
 <li><strong>Les avis sensibles vous sont signalés</strong><span>Hygiène, santé, menace, litige : jamais de réponse sans vous.</span></li>
 <li><strong>Vos anciens avis aussi</strong><span>À l'activation, les avis sans réponse des 12 derniers mois sont traités, du plus récent au plus ancien.</span></li>
 <li><strong>Un rapport chaque mois</strong><span>Note, nombre d'avis, ce que vos clients aiment et ce qu'ils reprochent.</span></li>
@@ -379,8 +420,8 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 </div>
 <ol class="parcours" aria-label="Circuit d'un avis de 1 à 3 étoiles">
 <li><strong>L'avis arrive</strong><span>Nous rédigeons une réponse calme et précise.</span></li>
-<li><strong>Vous la recevez par email</strong><span>Un clic pour publier, modifier ou ne pas publier. Ou une simple réponse « OK ».</span></li>
-<li><strong>Elle est publiée</strong><span>Seulement après votre accord.</span></li>
+<li><strong>Vous la recevez par email</strong><span>Un clic pour publier, modifier, demander une autre version ou ne pas publier. Ou une simple réponse « OK ».</span></li>
+<li><strong>Elle est publiée</strong><span>Après votre accord, puis vous recevez la confirmation.</span></li>
 </ol>
 <p>Chaque réponse reprend un détail réel de l'avis, dans la langue du client et avec vos expressions. Pas de formule copiée-collée.</p>
 </section>
@@ -396,11 +437,11 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <h2>Tarif</h2>
 <div class="offres">
 <div class="offre"><span class="pastille">Pour démarrer</span><strong>Essentiel</strong><div class="prix">97&nbsp;€ <small>HT par mois et par établissement</small></div><p class="mention">Soit environ 3,20&nbsp;€ HT par jour.</p>
-<ul><li>Réponse à tous vos avis Google sous 24&nbsp;h</li><li>Avis de 1 à 3 étoiles validés par vous</li><li>Alerte par email pour chaque avis négatif</li><li>Rapport mensuel</li></ul></div>
+<ul><li>Réponse à tous vos avis Google sous 24&nbsp;h, sans limite</li><li>Validation à la carte, en un clic</li><li>Alerte par email pour chaque avis négatif</li><li>Faux avis signalés à Google</li><li>Rapport mensuel</li></ul></div>
 <div class="offre"><span class="pastille">Le plus complet</span><strong>Premium</strong><div class="prix">197&nbsp;€ <small>HT par mois et par établissement</small></div>
 <ul><li>Tout Essentiel</li><li>Supports de collecte d'avis conformes aux règles de Google (QR code, carte à poser au comptoir)</li><li>Mise à jour mensuelle de votre fiche</li><li>Suivi de trois concurrents proches dans le rapport</li></ul></div>
 </div>
-<p><strong>Le premier mois est offert.</strong> Sans engagement : vous arrêtez quand vous voulez, par simple email, avec un préavis de 30 jours. Aucun paiement à l'activation ; le prélèvement mensuel commence au deuxième mois.</p>
+<p><strong>Le premier mois est offert.</strong> Sans engagement : vous arrêtez quand vous voulez, par simple email, avec un préavis de 30 jours, et immédiatement pendant le mois offert. Aucun moyen de paiement demandé à l'activation ; le prélèvement mensuel commence au deuxième mois. Aucuns frais de mise en route.</p>
 <div class="actions"><a class="bouton plein" href="/activer.html">Activer mon mois offert</a><a class="bouton creux" href="/conditions.html">Lire les conditions</a></div>
 </section>
 
@@ -421,11 +462,13 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <section class="section" id="questions">
 <h2>Questions</h2>
 <details><summary>Faut-il vous donner mon mot de passe Google&nbsp;?</summary><p>Non. Vous ajoutez notre adresse comme gestionnaire de votre fiche : vous ne partagez aucun mot de passe et vous restez propriétaire. <a href="/bienvenue.html">Voir comment faire</a>.</p></details>
-<details><summary>Que se passe-t-il pour un avis négatif&nbsp;?</summary><p>Nous vous envoyons par email la réponse proposée, sous 24&nbsp;heures : elle remercie le client, reconnaît le problème, s'excuse quand c'est justifié et l'invite à vous contacter directement. Sans votre accord, rien n'est publié.</p></details>
+<details><summary>Que se passe-t-il pour un avis négatif&nbsp;?</summary><p>Nous vous envoyons par email la réponse proposée, sous 24&nbsp;heures : elle remercie le client, reconnaît le problème, s'excuse quand c'est justifié et l'invite à vous contacter directement. Par défaut, rien n'est publié sans votre accord.</p></details>
 <details><summary>Comment se passe la validation&nbsp;?</summary><p>L'email présente chaque avis et sa réponse dans un tableau. Un bouton ouvre une page sécurisée où, pour chaque avis, vous choisissez Publier, Modifier (vous corrigez le texte directement) ou Ne pas publier, puis vous envoyez vos choix. Vous pouvez aussi tout publier d'un clic, ou simplement répondre « OK » à l'email. Nous vous confirmons ensuite ce qui est en ligne. <a href="/valider.html#exemple=1">Essayer la page avec un exemple</a>.</p></details>
 <details><summary>Et si un avis est faux ou injurieux&nbsp;?</summary><p>Nous vous le signalons. Google retire les avis qui enfreignent ses règles (faux avis, hors sujet, propos injurieux, conflit d'intérêts, informations personnelles) : vous pouvez le signaler depuis la page de validation, et nous vous proposons une réponse calme en attendant.</p></details>
-<details><summary>Puis-je valider toutes les réponses, même aux bons avis&nbsp;?</summary><p>Oui. Choisissez « Tous les avis » dans le formulaire d'activation, ou demandez-le par email à tout moment.</p></details>
-<details><summary>Les réponses sont-elles écrites par une IA&nbsp;?</summary><p>Elles sont rédigées avec l'aide de l'intelligence artificielle, à partir de votre ton et de vos consignes, puis vérifiées par des contrôles automatiques avant publication. Les avis négatifs passent par vous, et les avis sensibles ne reçoivent jamais de réponse sans vous.</p></details>
+<details><summary>Puis-je choisir ce que je valide&nbsp;?</summary><p>Oui, à l'activation puis à tout moment par simple email : les avis de 1 à 3 étoiles (par défaut), tous les avis, ou aucun. Vous choisissez aussi ce qui se passe si vous ne répondez pas : rien n'est publié sans votre accord (par défaut), ou la réponse proposée est publiée au bout de 48&nbsp;heures. Les avis sensibles (hygiène, santé, menace, litige) vous sont toujours soumis.</p></details>
+<details><summary>Et si la réponse proposée ne me convient pas&nbsp;?</summary><p>Vous la modifiez directement sur la page de validation, ou vous cliquez sur « Autre version » en disant en quelques mots ce qu'il faut changer : nous vous renvoyons une nouvelle proposition. Vous pouvez aussi choisir de ne pas répondre à cet avis.</p></details>
+<details><summary>Google vérifie-t-il les réponses&nbsp;?</summary><p>Oui. Google examine chaque réponse avant de l'afficher, en général en quelques minutes, parfois plus longtemps. Si Google refuse une réponse, nous la reformulons et, si elle avait été validée par vous, nous vous soumettons la nouvelle version.</p></details>
+<details><summary>Les réponses sont-elles écrites par une IA&nbsp;?</summary><p>Elles sont rédigées avec l'aide de l'intelligence artificielle, à partir de votre ton et de vos consignes, puis vérifiées par des contrôles automatiques avant publication : pas de promesse, pas de donnée personnelle, pas de formule copiée-collée. Vous validez ce que vous voulez, et les avis sensibles ne reçoivent jamais de réponse sans vous.</p></details>
 <details><summary>Combien de temps pour démarrer&nbsp;?</summary><p>Moins de 24&nbsp;heures : dès que vous nous avez ajoutés comme gestionnaire, nous traitons vos avis sans réponse des 12 derniers mois, en commençant par les plus récents.</p></details>
 <details><summary>J'ai plusieurs établissements</summary><p>Activez chacun d'eux avec le formulaire, une fois par établissement. Vous pouvez utiliser le même email pour tous.</p></details>
 <details><summary>Puis-je arrêter à tout moment&nbsp;?</summary><p>Oui. Le service est sans engagement. Un email suffit, avec un préavis de 30 jours. Pendant le mois offert, vous pouvez arrêter immédiatement, sans frais.</p></details>
@@ -433,10 +476,11 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <details><summary>Que faites-vous des données de mes clients&nbsp;?</summary><p>Nous traitons uniquement ce qui est nécessaire pour répondre aux avis (nom affiché, note, texte), pour votre compte, selon les <a href="/conditions.html">conditions du service</a>. Rien n'est vendu ni cédé.</p></details>
 <details><summary>Qui est derrière Pleine Note&nbsp;?</summary><p>Pleine Note est une marque d'AM DATA, entreprise individuelle française (SIREN 939&nbsp;133&nbsp;781). Une question&nbsp;? <a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a>, réponse sous 24&nbsp;h.</p></details>
 </section>
+<div class="barre-mobile" id="barre-mobile"><a class="bouton plein" href="#essai">Recevoir 3 réponses offertes</a></div>
 </main><footer class="cadre"><span>Pleine Note, une marque d'AM DATA (SIREN 939 133 781), Paris</span><nav><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="/conditions.html">Conditions du service</a><a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a></nav></footer><script>
 (function(){
 var DEST="contact@pleinenote.fr", CLE="pn-envoi";
-var NOMS={etablissement:"Établissement",ville:"Ville",email:"Email",prenom:"Prénom",adresse:"Adresse",fiche:"Fiche Google",societe:"Raison sociale et SIRET",nom:"Nom",formule:"Formule",validation:"Réponses à valider",ton:"Vos clients, vous les",signature:"Signature",consignes:"Consignes",email_validation:"Email de validation",contact_public:"Contact public",acceptation:"Conditions"};
+var NOMS={etablissement:"Établissement",ville:"Ville",email:"Email",prenom:"Prénom",adresse:"Adresse",fiche:"Fiche Google",societe:"Raison sociale et SIRET",nom:"Nom",formule:"Formule",validation:"Réponses à valider",ton:"Vos clients, vous les",signature:"Signature",consignes:"Consignes",email_validation:"Email de validation",contact_public:"Contact public",sans_reponse:"Sans réponse de ma part",acceptation:"Conditions"};
 function lire(f){ var d={}; new FormData(f).forEach(function(v,k){ d[k]=(k in d)?d[k]+", "+v:v; }); return d; }
 function secours(f,d,texte){
   var lignes=[];
@@ -483,5 +527,14 @@ document.querySelectorAll("form.formulaire").forEach(function(f){
       });
   });
 });
+})();
+</script><script>
+(function(){
+var b=document.getElementById("barre-mobile"),h=document.querySelector(".heros"),f=document.getElementById("essai");
+if(!b||!h||!f||!("IntersectionObserver" in window)) return;
+var hv=true,fv=false;
+function maj(){ var on=!hv&&!fv; b.classList.toggle("visible",on); document.body.classList.toggle("avec-barre",on); }
+new IntersectionObserver(function(e){ hv=e[0].isIntersecting; maj(); }).observe(h);
+new IntersectionObserver(function(e){ fv=e[0].isIntersecting; maj(); }).observe(f);
 })();
 </script></body></html>

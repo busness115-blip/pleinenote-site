@@ -289,6 +289,25 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .inclus li span{color:var(--encre-douce);font-size:1rem;line-height:1.5}
 .inclus li.premium{border-color:var(--tampon)}
 .inclus li em{justify-self:start;font-style:normal;font-family:var(--f-titre);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--tampon);color:#fff;padding:2px 8px;border-radius:999px}
+.comparatif{display:grid;gap:14px;margin:6px 0 0}
+@media (min-width:760px){.comparatif{grid-template-columns:1fr 1fr}}
+.comparatif>div{border-radius:10px;padding:18px 20px;border:1px solid var(--filet);background:var(--surface)}
+.comparatif .avec{border:2px solid var(--tampon)}
+.comparatif h3{margin:0 0 8px;font-size:1.1rem}
+.comparatif ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.comparatif .sans li{color:var(--encre-douce)}
+.apercus{display:grid;gap:18px;margin:10px 0 6px}
+@media (min-width:760px){.apercus{grid-template-columns:1fr 1fr}}
+.apercus figure{margin:0;display:grid;gap:8px}
+.apercus .cadre-image{max-height:520px;overflow:hidden;border:1px solid var(--filet);border-radius:14px;background:#F4F5F2;box-shadow:0 10px 30px rgba(23,34,74,.10);position:relative}
+.apercus .cadre-image::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(rgba(244,245,242,0),#F4F5F2)}
+.apercus img{display:block;width:100%;height:auto}
+.apercus figcaption{font-size:.95rem;color:var(--encre-douce)}
+.rassurance{margin:0;font-size:.95rem;color:var(--encre-douce)}
+.barre-mobile{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--filet);box-shadow:0 -6px 20px rgba(23,34,74,.12);display:none}
+.barre-mobile .bouton{width:100%;justify-content:center;text-align:center;box-sizing:border-box}
+@media (max-width:759px){.barre-mobile.visible{display:block}body.avec-barre{padding-bottom:76px}}
+@media print{.barre-mobile{display:none!important}}
 .secours{display:grid;gap:10px;padding:16px;border:2px solid var(--tampon);border-radius:8px;background:var(--papier)}
 .secours p{margin:0}
 .valider{max-width:52rem;margin:0 auto;padding-bottom:110px}
@@ -300,7 +319,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .v-choix{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
 .entete.simple{justify-content:space-between}
 .v-carte{background:var(--surface);border:1px solid var(--filet);border-left:5px solid var(--filet);border-radius:10px;padding:16px 18px;margin:0 0 14px;display:grid;gap:8px}
-.v-carte.publier{border-left-color:#1E7B34}.v-carte.modifier{border-left-color:var(--tampon)}.v-carte.refuser{border-left-color:#8A8F9E;opacity:.85}.v-carte.signaler{border-left-color:#B42318}
+.v-carte.publier{border-left-color:#1E7B34}.v-carte.modifier,.v-carte.revoir{border-left-color:var(--tampon)}.v-carte.refuser{border-left-color:#8A8F9E;opacity:.85}.v-carte.signaler{border-left-color:#B42318}
 .v-tete{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
 .v-ref{font-family:var(--f-titre);font-weight:800}
 .v-etoiles{color:#E8A400;letter-spacing:2px;font-size:1.1rem}
@@ -319,7 +338,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 .v-choix button.actif{background:#17224A;border-color:#17224A;color:#fff}
 .v-carte.publier .v-choix button.actif{background:#1E7B34;border-color:#1E7B34}
 .v-carte.signaler .v-choix button.actif{background:#B42318;border-color:#B42318}
-.v-raison{font:inherit;padding:9px 12px;border:1px solid var(--filet);border-radius:6px}
+.v-raison,.v-note{font:inherit;padding:9px 12px;border:1px solid var(--filet);border-radius:6px;width:100%;box-sizing:border-box}
+.v-note{border:2px solid var(--tampon);resize:vertical}
+.v-auto{margin:0;padding:8px 12px;background:#EEF0FB;border-radius:6px;font-size:.95rem}
 .v-barre{position:sticky;bottom:0;z-index:5;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--filet);border-radius:12px;padding:12px 16px;box-shadow:0 -6px 24px rgba(23,34,74,.12);margin-top:6px}
 .v-barre p{margin:0;font-size:.95rem;color:var(--encre-douce)}
 .v-barre button:disabled{opacity:.45;cursor:not-allowed}
@@ -340,7 +361,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 <h2>Et ensuite</h2>
 <ul>
 <li>Sous 24&nbsp;heures après l'accès, vos avis encore sans réponse sont traités, en commençant par les plus récents.</li>
-<li>Pour les avis de 1 à 3 étoiles, vous recevez la réponse proposée par email : un clic pour publier, modifier ou ne pas publier, ou une simple réponse « OK ».</li>
+<li>Pour les avis que vous avez choisi de valider, vous recevez la réponse proposée par email : un clic pour publier, modifier, demander une autre version ou ne pas publier, ou une simple réponse « OK ».</li>
 <li>Chaque mois, vous recevez votre rapport par email.</li>
 </ul>
 <p>Une question&nbsp;? <a href="mailto:contact@pleinenote.fr">contact@pleinenote.fr</a></p>
