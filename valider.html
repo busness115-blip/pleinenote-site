@@ -412,11 +412,11 @@ function confirmer(ds,secours){
   var ul=el("ul");
   var n={publier:0,modifier:0,refuser:0,signaler:0}; ds.forEach(function(d){ n[d.action]++; });
   if(n.publier) ul.appendChild(el("li",null,n.publier+" réponse"+(n.publier>1?"s":"")+" à publier telle"+(n.publier>1?"s":"")+" quelle"+(n.publier>1?"s":"")));
-  if(n.modifier) ul.appendChild(el("li",null,n.modifier+" réponse"+(n.modifier>1?"s":"")+" publiée"+(n.modifier>1?"s":"")+" dans votre version"));
+  if(n.modifier) ul.appendChild(el("li",null,n.modifier+" réponse"+(n.modifier>1?"s":"")+" à publier dans votre version"));
   if(n.refuser) ul.appendChild(el("li",null,n.refuser+" avis laissé"+(n.refuser>1?"s":"")+" sans réponse"));
-  if(n.signaler) ul.appendChild(el("li",null,n.signaler+" avis signalé"+(n.signaler>1?"s":"")+" à Google"));
+  if(n.signaler) ul.appendChild(el("li",null,n.signaler+" avis à signaler à Google"));
   box.appendChild(ul);
-  box.appendChild(el("p",null,"Les réponses sont publiées sous 24 heures, puis vous recevez une confirmation par email. Vous pouvez fermer cette page."));
+  box.appendChild(el("p",null,"Nous appliquons vos choix sous 24 heures, puis vous recevez une confirmation par email. Vous pouvez fermer cette page."));
   box.scrollIntoView({behavior:"smooth"});
 }
 function envoyer(){
@@ -465,7 +465,7 @@ var EXEMPLE={demo:true,t:"0000000000000000",e:"Le Comptoir des Halles, Lyon (exe
  {r:"V000000-3",n:1,d:"il y a 3 jours",du:"Avis possiblement contraire aux règles de Google (promotion d'un autre établissement). Vous pouvez le signaler à Google.",x:"Nul. Allez plutôt chez mon cousin en face, c'est bien meilleur.",p:"Bonjour, nous sommes surpris par ce message et ne retrouvons pas trace de votre passage. Si vous êtes venu chez nous, écrivez-nous via le contact indiqué sur notre fiche : nous serons heureux d'en parler. Sarah et l'équipe du Comptoir"}]};
 var p=params();
 if(p.exemple){ donnees=EXEMPLE; afficher(); return; }
-if(p.ok){ zone.innerHTML="<div class='v-fin'><h2>C'est noté, merci.</h2><p>Vos choix sont enregistrés. Les réponses sont publiées sous 24 heures, puis vous recevez une confirmation par email.</p></div>"; return; }
+if(p.ok){ zone.innerHTML="<div class='v-fin'><h2>C'est noté, merci.</h2><p>Vos choix sont enregistrés. Nous les appliquons sous 24 heures, puis vous recevez une confirmation par email.</p></div>"; return; }
 if(!p.d){ zone.innerHTML="<div class='v-fin'><h2>Lien incomplet</h2><p>Ouvrez cette page depuis le bouton de l'email reçu, ou répondez simplement à cet email : « OK » pour tout publier.</p></div>"; return; }
 lireDonnees(p.d).then(function(d){
   donnees=d; afficher();
